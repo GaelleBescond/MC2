@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bee8p8gj3p1ku"]
+
+[ext_resource type="Script" uid="uid://bv8pi171iph4j" path="res://levels/loading_screen.gd" id="1_13khc"]
+
+[node name="Control" type="Control" unique_id=605820765]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_13khc")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2057416925]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer" unique_id=1821855255]
+layout_mode = 2
+color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer" unique_id=1787875582]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="PanelContainer/CenterContainer" unique_id=375372955]
+layout_mode = 2
+text = "LOADING SCREEN"

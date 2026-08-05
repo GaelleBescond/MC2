@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://ddivxkymsyn5l"]
+
+[ext_resource type="Script" uid="uid://bskeoc8ip8m6e" path="res://player/player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://4rc2inwsm2vs" path="res://player/camera_3d.gd" id="2_rkbax"]
+
+[node name="Player" type="Node3D" unique_id=815340344 groups=["Player"]]
+script = ExtResource("1_4flbx")
+
+[node name="Camera_" type="Camera3D" parent="." unique_id=198152362]
+transform = Transform3D(1, 0, 0, 0, 0.57357645, 0.81915206, 0, -0.81915206, 0.57357645, 0, 6.2559533, 5.614114)
+script = ExtResource("2_rkbax")
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera_" unique_id=429101328]
+target_position = Vector3(0, 0, -1)
+hit_from_inside = true
+collide_with_areas = true
+debug_shape_custom_color = Color(1, 0.30771422, 0.6341079, 1)
+
+[node name="HUD" type="Control" parent="." unique_id=56739699]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DataContainer" type="PanelContainer" parent="HUD" unique_id=631291567]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 100.0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="HUD/DataContainer" unique_id=261963356]
+layout_mode = 2
+color = Color(0.70564216, 0, 0.25034285, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/DataContainer" unique_id=1946649571]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="HUD/DataContainer/VBoxContainer" unique_id=794618773]
+layout_mode = 2
+text = "Pop"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="HUD/DataContainer/VBoxContainer" unique_id=514590197]
+layout_mode = 2
+text = "Money
+"
+vertical_alignment = 1
+
+[node name="HandContainer" type="PanelContainer" parent="HUD" unique_id=811140340]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -100.0
+offset_right = 500.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/HandContainer" unique_id=1935264520]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HUD/HandContainer" unique_id=653559839]
+layout_mode = 2
+text = "Hand Manager"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/HandContainer" unique_id=1999249608]
+layout_mode = 2
+color = Color(0.48235294, 0.14117648, 0, 0.4509804)
+
+[node name="MinimapContainer" type="PanelContainer" parent="HUD" unique_id=1328180929]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(1, 1)
+
+[node name="Label2" type="Label" parent="HUD/MinimapContainer" unique_id=899132564]
+layout_mode = 2
+text = "Minimap"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/MinimapContainer" unique_id=4900200]
+layout_mode = 2
+color = Color(0, 0.3362695, 0.08854779, 0.4509804)
+
+[node name="OptionsContainer" type="PanelContainer" parent="HUD" unique_id=1413154151]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+pivot_offset_ratio = Vector2(1, 1)
+
+[node name="Label2" type="Label" parent="HUD/OptionsContainer" unique_id=1211670316]
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/OptionsContainer" unique_id=1148001874]
+layout_mode = 2
+color = Color(0.2788474, 0.00057419983, 0.72231513, 0.4509804)

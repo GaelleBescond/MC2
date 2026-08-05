@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c282f1nuun64a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u5xnb"]
+albedo_color = Color(0.359454, 0.26516184, 0.14619237, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dll4p"]
+albedo_color = Color(0.4117195, 0.31422365, 0.16913792, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ceia4"]
+material = SubResource("StandardMaterial3D_dll4p")
+top_radius = 16.0
+radial_segments = 6
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xywek"]
+albedo_color = Color(0.21686181, 0.3716807, 0.17630604, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6xw3x"]
+material = SubResource("StandardMaterial3D_xywek")
+top_radius = 16.0
+radial_segments = 6
+rings = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6xw3x"]
+albedo_color = Color(0.41598046, 0.41598043, 0.4159804, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ifdhe"]
+material = SubResource("StandardMaterial3D_6xw3x")
+top_radius = 16.0
+radial_segments = 6
+rings = 0
+
+[node name="Node3D" type="Node3D" unique_id=761989046]
+
+[node name="Dirt" type="MeshInstance3D" parent="." unique_id=1982870627]
+material_override = SubResource("StandardMaterial3D_u5xnb")
+mesh = SubResource("CylinderMesh_ceia4")
+
+[node name="Grass" type="MeshInstance3D" parent="." unique_id=1058551891]
+mesh = SubResource("CylinderMesh_6xw3x")
+
+[node name="Concrete" type="MeshInstance3D" parent="." unique_id=258745146]
+mesh = SubResource("CylinderMesh_ifdhe")

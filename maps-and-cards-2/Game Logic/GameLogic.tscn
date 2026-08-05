@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bwj1mendnmse6"]
+
+[ext_resource type="Script" uid="uid://bp87g412f23nd" path="res://Game Logic/game_logic.gd" id="1_0fjvq"]
+
+[node name="GameLogic" type="Node" unique_id=423017341]
+script = ExtResource("1_0fjvq")
+
+[node name="Timer" type="Timer" parent="." unique_id=265985633]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
