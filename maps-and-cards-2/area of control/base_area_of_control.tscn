@@ -6,19 +6,6 @@
 margin = 0.0
 data = PackedVector3Array(0, 5.5, 32, 27.7128, 5.5, 16, 0, -5.5, 32, 27.7128, 5.5, 16, 27.7128, -5.5, 16, 0, -5.5, 32, 27.7128, 5.5, 16, 27.7128, 5.5, -16, 27.7128, -5.5, 16, 27.7128, 5.5, -16, 27.7128, -5.5, -16, 27.7128, -5.5, 16, 27.7128, 5.5, -16, 0, 5.5, -32, 27.7128, -5.5, -16, 0, 5.5, -32, 0, -5.5, -32, 27.7128, -5.5, -16, 0, 5.5, -32, -27.7128, 5.5, -16, 0, -5.5, -32, -27.7128, 5.5, -16, -27.7128, -5.5, -16, 0, -5.5, -32, -27.7128, 5.5, -16, -27.7128, 5.5, 16, -27.7128, -5.5, -16, -27.7128, 5.5, 16, -27.7128, -5.5, 16, -27.7128, -5.5, -16, -27.7128, 5.5, 16, 0, 5.5, 32, -27.7128, -5.5, 16, 0, 5.5, 32, 0, -5.5, 32, -27.7128, -5.5, 16, 0, 5.5, 0, 27.7128, 5.5, 16, 0, 5.5, 32, 0, 5.5, 0, 27.7128, 5.5, -16, 27.7128, 5.5, 16, 0, 5.5, 0, 0, 5.5, -32, 27.7128, 5.5, -16, 0, 5.5, 0, -27.7128, 5.5, -16, 0, 5.5, -32, 0, 5.5, 0, -27.7128, 5.5, 16, -27.7128, 5.5, -16, 0, 5.5, 0, 0, 5.5, 32, -27.7128, 5.5, 16, 0, -5.5, 0, 0, -5.5, 32, 27.7128, -5.5, 16, 0, -5.5, 0, 27.7128, -5.5, 16, 27.7128, -5.5, -16, 0, -5.5, 0, 27.7128, -5.5, -16, 0, -5.5, -32, 0, -5.5, 0, 0, -5.5, -32, -27.7128, -5.5, -16, 0, -5.5, 0, -27.7128, -5.5, -16, -27.7128, -5.5, 16, 0, -5.5, 0, -27.7128, -5.5, 16, 0, -5.5, 32)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmgay"]
-albedo_color = Color(0.061087877, 0.14849666, 0, 1)
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_ceia4"]
-material = SubResource("StandardMaterial3D_gmgay")
-top_radius = 32.0
-bottom_radius = 32.0
-height = 1.0
-radial_segments = 6
-
-[sub_resource type="BoxMesh" id="BoxMesh_ceia4"]
-size = Vector3(10, 4, 5)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ahsk"]
 transparency = 1
 albedo_color = Color(9.62615e-07, 0.28219315, 0.7511624, 0.49019608)
@@ -42,93 +29,6 @@ font_size = 16
 [node name="Timer" type="Timer" parent="." unique_id=674946972]
 wait_time = 0.3
 autostart = true
-
-[node name="Tile" type="MeshInstance3D" parent="." unique_id=1186862436]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-mesh = SubResource("CylinderMesh_ceia4")
-
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="Tile" unique_id=664586150]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-
-[node name="CSGMesh3D18" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1546142081]
-transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 25.014866, 2, -11.029491)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D19" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1454107463]
-transform = Transform3D(0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660254, 22.184738, 2, -16.127567)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D20" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1250552378]
-transform = Transform3D(0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660254, 13.524485, 2, -21.127567)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D21" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1621697236]
-transform = Transform3D(0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660254, 4.864231, 2, -26.127567)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D22" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1885452397]
-transform = Transform3D(-1.3909066e-08, 0, -1, 0, 1, 0, 1, 0, -1.3909066e-08, 25.246918, 2, 10.549345)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D4" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=70034863]
-transform = Transform3D(0.86602527, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.86602527, -2.9851341, 2, -27.261627)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D5" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1490928357]
-transform = Transform3D(0.86602527, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.86602527, -22.03769, 2, -16.261627)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D33" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=2001842364]
-transform = Transform3D(0.86602527, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.86602527, 22.014862, 2, 16.039637)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D35" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=64487576]
-transform = Transform3D(0.86602527, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.86602527, 14.220634, 2, 20.539637)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D36" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1423957218]
-transform = Transform3D(0.86602527, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.86602527, 7.2924323, 2, 24.539637)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D34" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1023732116]
-transform = Transform3D(0.86602527, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.86602527, 2.9623075, 2, 27.039637)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D8" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=330350146]
-transform = Transform3D(0.4999999, 0, -0.86602527, 0, 1, 0, 0.86602527, 0, 0.4999999, -16.939613, 2, -13.4315)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D6" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1792844384]
-transform = Transform3D(-5.9604645e-08, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -5.9604645e-08, -25.03769, 2, -10.261628)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D7" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=2058378009]
-transform = Transform3D(-5.9604645e-08, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -5.9604645e-08, -25.037691, 2, 10.73837)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D16" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1761884485]
-transform = Transform3D(0.8660253, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660253, -22.269743, 2, 16.336445)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D17" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=316947475]
-transform = Transform3D(0.8660253, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, 0.8660253, -3.2697456, 2, 27.604395)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D23" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=1656198565]
-transform = Transform3D(0.49999994, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999994, -18.090252, 2, 13.274269)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D30" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=516884125]
-transform = Transform3D(0.49999994, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999994, 2.6321788, 2, 11.381965)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D29" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=960709352]
-transform = Transform3D(0.49999994, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, 0.49999994, 2.1321788, 2, 12.24799)
-mesh = SubResource("BoxMesh_ceia4")
-
-[node name="CSGMesh3D32" type="CSGMesh3D" parent="Tile/CSGCombiner3D" unique_id=2052490971]
-transform = Transform3D(0.99999994, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 0.99999994, 8.632178, 2, 8.381966)
-mesh = SubResource("BoxMesh_ceia4")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2088116615]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.138447, 0)

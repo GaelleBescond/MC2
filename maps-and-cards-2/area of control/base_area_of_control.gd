@@ -14,6 +14,7 @@ var playerOwner : int :
 			if ownerchange == 2:
 				color = Color.DARK_RED
 				owner_ui.modulate = color
+@export var canSpawnSquads := false
 
 @onready var area_unit_collider: CollisionShape3D = $area_unit_collider
 @onready var csg_combiner_3d: CSGCombiner3D = $CSGCombiner3D
@@ -31,7 +32,7 @@ func _process(delta: float) -> void:
 #Hover feedbacks
 func _on_mouse_entered() -> void:
 	csg_combiner_3d.visible = true
-	
+
 func _on_mouse_exited() -> void:
 	csg_combiner_3d.visible = false
 

@@ -17,10 +17,10 @@ func _process(delta: float) -> void:
 		areaOfDestination = select_area()
 		#print(str(areaOfDestination) + " Area of destination")
 	if areaOfOrigin != null && areaOfDestination != null:
-		if areaOfOrigin != areaOfDestination:
-			areaOfOrigin.give_move_order(areaOfDestination, 1)
-		else:
-			print("same area")
+		areaOfOrigin != areaOfDestination
+		areaOfOrigin.give_move_order(areaOfDestination, 1)
+		"""else:
+			print("same area")"""
 		areaOfDestination = null
 		areaOfOrigin = null
 
