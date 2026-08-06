@@ -1,7 +1,8 @@
 extends Camera3D
 
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
-var selected_area 
+var areaOfOrigin : Area3D
+var areaOfDestination : Area3D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -10,16 +11,23 @@ func _process(delta: float) -> void:
 	ray_cast_3d.force_raycast_update()
 	
 	if Input.is_action_just_pressed("left_click"):
-		select_area()
-	#else:
-	#	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-	#else:
-	#	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+		areaOfOrigin = select_area()
+		#print(str(areaOfOrigin) + " Area of Origin")
+	if Input.is_action_just_released("left_click"):
+		areaOfDestination = select_area()
+		#print(str(areaOfDestination) + " Area of destination")
+	if areaOfOrigin != null && areaOfDestination != null:
+		if areaOfOrigin != areaOfDestination:
+			areaOfOrigin.give_move_order(areaOfDestination, 1)
+		else:
+			print("same area")
+		areaOfDestination = null
+		areaOfOrigin = null
 
-func select_area() -> void:
+func select_area() -> Area3D:
 	if ray_cast_3d.is_colliding():
-		var collision_point = ray_cast_3d.get_collision_point()		
-		print(collision_point)
-		
+		var collisionPoint = ray_cast_3d.get_collision_point()
+		var selectedArea = ray_cast_3d.get_collider()
+		return selectedArea
 	else:
-		print("no detected surface")
+		return null

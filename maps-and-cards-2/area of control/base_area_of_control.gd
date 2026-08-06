@@ -46,6 +46,14 @@ func _on_timer_timeout() -> void:
 func _on_body_entered(body: Node3D) -> void:
 	#print("SIGNAL IN:", body.name)
 	squadsInside.append(body)
+	print("IN " + str(squadsInside))
 func _on_body_exited(body: Node3D) -> void:
 	#print("SIGNAL OUT:", body.name)
-	squadsInside.erase(body)
+	squadsInside.erase(body.get_parent())
+	print("OUT " + str(squadsInside))
+
+func give_move_order(destination, player) -> void:
+	print("move order received by " + str(destination)+" from player "+ str(player))
+	for squad in squadsInside:
+		if squad.player == player:
+			squad.received_move_order(destination.global_position)

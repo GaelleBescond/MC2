@@ -24,7 +24,7 @@ var isInCombat := false
 
 func _ready() -> void:
 	playerOwner = player
-	received_move_order(targetPosition)
+	#received_move_order(targetPosition)
 
 
 func _physics_process(delta: float) -> void:

@@ -52,34 +52,24 @@ environment = SubResource("Environment_sb12i")
 [node name="base_area_of_control" parent="Environment" unique_id=467104796 instance=ExtResource("3_o6mel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047626495, -0.034303665, 0.017770767)
 player = 1
+metadata/_edit_lock_ = true
 
 [node name="base_area_of_control6" parent="Environment" unique_id=731557283 instance=ExtResource("3_o6mel")]
 transform = Transform3D(0.5000001, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, 0.5000001, -27.724377, 0, -47.770683)
 player = 2
+metadata/_edit_lock_ = true
 
 [node name="Squads" type="Node" parent="." unique_id=320970374]
 
-[node name="Unit_Base_Template10" parent="Squads" unique_id=1737016593 instance=ExtResource("3_gmgay")]
+[node name="Squad1" parent="Squads" unique_id=1737016593 instance=ExtResource("3_gmgay")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.061, -0.03429985, -62.036617)
 
-[node name="Unit_Base_Template11" parent="Squads" unique_id=296204860 instance=ExtResource("3_gmgay")]
+[node name="Squad2" parent="Squads" unique_id=296204860 instance=ExtResource("3_gmgay")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.81477, -0.034303665, 0.8069382)
 player = 1
 
-[node name="Unit_Base_Template16" parent="Squads" unique_id=269893068 instance=ExtResource("3_gmgay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.20939, -0.034303665, -39.51416)
-player = 2
-
-[node name="Unit_Base_Template17" parent="Squads" unique_id=1497742387 instance=ExtResource("3_gmgay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.94178, -0.034303665, -37.97352)
-player = 2
-
-[node name="Unit_Base_Template19" parent="Squads" unique_id=2056149893 instance=ExtResource("3_gmgay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.92489, -0.034303665, -67.56948)
+[node name="Squad3" parent="Squads" unique_id=1038555013 instance=ExtResource("3_gmgay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.995927, -0.034303665, 0.8069382)
 player = 1
-
-[node name="Unit_Base_Template6" parent="Squads" unique_id=351576522 instance=ExtResource("3_gmgay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.17513, -0.034303665, -32.669575)
-player = 2
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
