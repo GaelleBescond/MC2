@@ -16,8 +16,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	move_camera(delta)
-	#player_use_card()
-	#player_gives_move_order()
 
 func move_camera(delta) -> void:
 	if Input.is_action_pressed("input_up"):
@@ -47,7 +45,4 @@ func player_use_card() -> void:
 
 #send to level manager if player gives unit move order
 func player_gives_move_order() -> void:
-	#If selected area =/= targeted area
-	#make sure about select/deselect Ux
-	if Input.is_action_pressed("ui_accept"):
-		get_tree().call_group("Squad_Handler", "received_move_order(0,0,0)")
+	pass

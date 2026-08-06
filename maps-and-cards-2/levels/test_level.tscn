@@ -52,12 +52,10 @@ environment = SubResource("Environment_sb12i")
 [node name="base_area_of_control" parent="Environment" unique_id=467104796 instance=ExtResource("3_o6mel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0047626495, -0.034303665, 0.017770767)
 player = 1
-captureGauge = null
 
 [node name="base_area_of_control6" parent="Environment" unique_id=731557283 instance=ExtResource("3_o6mel")]
 transform = Transform3D(0.5000001, 0, -0.8660253, 0, 1, 0, 0.8660253, 0, 0.5000001, -27.724377, 0, -47.770683)
 player = 2
-captureGauge = null
 
 [node name="Squads" type="Node" parent="." unique_id=320970374]
 

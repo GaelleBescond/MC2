@@ -21,32 +21,31 @@ var playerOwner : int :
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print(get_overlapping_bodies())
-	for body in get_overlapping_bodies():
-		if body.is_in_group("Squad_Handler"):
-			
-			body.append(squadsInside)
-	print(squadsInside)
 	playerOwner = player
+	await get_tree().create_timer(0.1).timeout
+	for body in get_overlapping_bodies():
+		squadsInside.append(body)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
+
+#Hover feedbacks
 func _on_mouse_entered() -> void:
 	csg_combiner_3d.visible = true
+	
 func _on_mouse_exited() -> void:
 	csg_combiner_3d.visible = false
 
-
+#Timer ticking logic (capture, cards, money, etc)
 func _on_timer_timeout() -> void:
 	pass
 
-func check_squads_inside() -> void:
-	pass
-
-
-func _on_body_shape_entered(body_rid: RID, body: Node3D, body_shape_index: int, local_shape_index: int) -> void:
-	squadsInside.append_array(body)
-	print(body_rid)
-	
+#Array units inside 
+func _on_body_entered(body: Node3D) -> void:
+	#print("SIGNAL IN:", body.name)
+	squadsInside.append(body)
+func _on_body_exited(body: Node3D) -> void:
+	#print("SIGNAL OUT:", body.name)
+	squadsInside.erase(body)
