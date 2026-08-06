@@ -4,7 +4,7 @@
 
 [node name="Node2D" type="CanvasLayer" unique_id=899622243]
 script = ExtResource("1_0ettg")
-level_file_path = "uid://qm0i5n10ftnk"
+level_file_path = "uid://dempgf4yo7y24"
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1963989450]
 anchors_preset = 15

@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://cskr3hpq4eybo"]
 
 [ext_resource type="Script" uid="uid://cf0ic1s6oh08p" path="res://area of control/base_area_of_control.gd" id="1_4f7ue"]
-[ext_resource type="Script" uid="uid://bodqu31so65i1" path="res://area of control/area_collider.gd" id="1_w00wa"]
-[ext_resource type="Script" uid="uid://bj8sk6aphtcru" path="res://area of control/owner_ui.gd" id="3_k0ryl"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2snab"]
 margin = 0.1
@@ -21,9 +19,9 @@ radial_segments = 6
 [sub_resource type="BoxMesh" id="BoxMesh_ceia4"]
 size = Vector3(10, 4, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0ryl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ahsk"]
 transparency = 1
-albedo_color = Color(0.3137255, 0.3137255, 0.3137255, 0.40392157)
+albedo_color = Color(9.62615e-07, 0.28219315, 0.7511624, 0.49019608)
 
 [node name="base_area_of_control" type="Area3D" unique_id=467104796]
 script = ExtResource("1_4f7ue")
@@ -32,7 +30,18 @@ script = ExtResource("1_4f7ue")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("ConcavePolygonShape3D_2snab")
 debug_fill = false
-script = ExtResource("1_w00wa")
+
+[node name="OwnerUI" type="Label3D" parent="." unique_id=524837501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.138447, 0)
+pixel_size = 0.085
+billboard = 1
+modulate = Color(0.6503868, 3.946722e-06, 0.41453207, 1)
+text = "Owner"
+font_size = 16
+
+[node name="Timer" type="Timer" parent="." unique_id=674946972]
+wait_time = 0.3
+autostart = true
 
 [node name="Tile" type="MeshInstance3D" parent="." unique_id=1186862436]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -121,23 +130,18 @@ mesh = SubResource("BoxMesh_ceia4")
 transform = Transform3D(0.99999994, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 0.99999994, 8.632178, 2, 8.381966)
 mesh = SubResource("BoxMesh_ceia4")
 
-[node name="OwnerUI" type="Label3D" parent="." unique_id=524837501]
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2088116615]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.138447, 0)
-pixel_size = 0.085
-billboard = 1
-modulate = Color(0.6503868, 3.946722e-06, 0.41453207, 1)
-text = "Owner"
-font_size = 16
-script = ExtResource("3_k0ryl")
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1898333524]
-transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 0, 0)
 visible = false
-material_override = SubResource("StandardMaterial3D_k0ryl")
-radius = 32.0
-sides = 6
 
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=273080147]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, -8.138447, 0)
+radius = 32.0
+height = 0.5
+sides = 6
+material = SubResource("StandardMaterial3D_2ahsk")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
-[connection signal="child_entered_tree" from="area_unit_collider" to="area_unit_collider" method="_on_child_entered_tree"]
-[connection signal="child_exiting_tree" from="area_unit_collider" to="area_unit_collider" method="_on_child_exiting_tree"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
