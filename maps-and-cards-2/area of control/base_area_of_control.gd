@@ -54,17 +54,24 @@ func _on_body_exited(body: Node3D) -> void:
 func give_move_order(destination, player) -> void:
 	print("move order received by " + str(destination)+" from player "+ str(player))
 	for squad in squadsInside:
-		if squad.player == player:
+		if squad.player == player && !squad.isInCombat:
 			squad.received_move_order(destination.global_position)
+		else:
+			print("Squad pinned")
 
 func check_enemity() -> void:
 	if squadsInside.size() >= 1:
 		var squadIndex := squadsInside[0]
 		var playerCheck : int = squadIndex.player
+		var enemity := false
 		for squad in squadsInside:
-			if squad.player != playerCheck:
-				print("enemity")
+			if (squad.player != playerCheck) && (playerCheck != 0):
+				print(str(squad.player) + " enemity " + str(playerCheck))
+				enemity = true
+				break
+		for squad in squadsInside:
+			squad.toggle_combat_mode(enemity)
+			print(squad.isInCombat)
 	else:
-		print("no enemy")
+		print("nobody")
 	return
-		

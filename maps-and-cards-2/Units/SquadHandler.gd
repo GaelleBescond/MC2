@@ -46,3 +46,6 @@ func _on_navigation_agent_3d_target_reached() -> void:
 
 func retreat() -> void:
 	pass
+
+func toggle_combat_mode(switch) -> void:
+	isInCombat = switch
