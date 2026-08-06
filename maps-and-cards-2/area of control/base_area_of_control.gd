@@ -22,10 +22,7 @@ var playerOwner : int :
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	playerOwner = player
-	await get_tree().create_timer(0.1).timeout
-	for body in get_overlapping_bodies():
-		squadsInside.append(body)
-	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -46,14 +43,28 @@ func _on_timer_timeout() -> void:
 func _on_body_entered(body: Node3D) -> void:
 	#print("SIGNAL IN:", body.name)
 	squadsInside.append(body)
-	print("IN " + str(squadsInside))
+	#print("IN " + str(squadsInside))
+	check_enemity()
 func _on_body_exited(body: Node3D) -> void:
-	#print("SIGNAL OUT:", body.name)
-	squadsInside.erase(body.get_parent())
-	print("OUT " + str(squadsInside))
+	#print("SIGNAL OUT:", body)
+	squadsInside.erase(body)
+	#print("OUT " + str(squadsInside))
+	check_enemity()
 
 func give_move_order(destination, player) -> void:
 	print("move order received by " + str(destination)+" from player "+ str(player))
 	for squad in squadsInside:
 		if squad.player == player:
 			squad.received_move_order(destination.global_position)
+
+func check_enemity() -> void:
+	if squadsInside.size() >= 1:
+		var squadIndex := squadsInside[0]
+		var playerCheck : int = squadIndex.player
+		for squad in squadsInside:
+			if squad.player != playerCheck:
+				print("enemity")
+	else:
+		print("no enemy")
+	return
+		

@@ -64,10 +64,6 @@ metadata/_edit_lock_ = true
 [node name="Squad1" parent="Squads" unique_id=1737016593 instance=ExtResource("3_gmgay")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.061, -0.03429985, -62.036617)
 
-[node name="Squad2" parent="Squads" unique_id=296204860 instance=ExtResource("3_gmgay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.81477, -0.034303665, 0.8069382)
-player = 1
-
 [node name="Squad3" parent="Squads" unique_id=1038555013 instance=ExtResource("3_gmgay")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.995927, -0.034303665, 0.8069382)
 player = 1
