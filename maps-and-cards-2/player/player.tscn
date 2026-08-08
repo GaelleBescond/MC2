@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bskeoc8ip8m6e" path="res://player/player.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://4rc2inwsm2vs" path="res://player/camera_3d.gd" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://bo62vs6eonwkb" path="res://card system/card_template.tscn" id="3_g1dw6"]
 
 [node name="Player" type="Node3D" unique_id=815340344 groups=["Player"]]
 script = ExtResource("1_4flbx")
@@ -9,6 +10,45 @@ script = ExtResource("1_4flbx")
 [node name="Camera_" type="Camera3D" parent="." unique_id=198152362]
 transform = Transform3D(1, 0, 0, 0, 0.57357645, 0.81915206, 0, -0.81915206, 0.57357645, 0, 6.2559533, 5.614114)
 script = ExtResource("2_rkbax")
+
+[node name="Cards_Lcoation_Size" type="Node3D" parent="Camera_" unique_id=847761245]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 4.7683717e-08, -1.3429908)
+
+[node name="Deck 1" type="Node3D" parent="Camera_/Cards_Lcoation_Size" unique_id=1234044823]
+transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0, -1.2401907, -2.264408e-08)
+
+[node name="Card_Template" parent="Camera_/Cards_Lcoation_Size/Deck 1" unique_id=772346917 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, -1.4555881, -1.7578449)
+
+[node name="Card_Template2" parent="Camera_/Cards_Lcoation_Size/Deck 1" unique_id=1486218094 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.5784364, -1.4555881, -1.7578449)
+
+[node name="Card_Template3" parent="Camera_/Cards_Lcoation_Size/Deck 1" unique_id=901510495 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.5772129, -1.4555881, -1.7578449)
+
+[node name="Deck 2" type="Node3D" parent="Camera_/Cards_Lcoation_Size" unique_id=1846208477]
+transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, -2.4251864, -1.2401907, -2.264408e-08)
+
+[node name="Card_Template" parent="Camera_/Cards_Lcoation_Size/Deck 2" unique_id=1219343835 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, -1.4555881, -1.7578449)
+
+[node name="Card_Template2" parent="Camera_/Cards_Lcoation_Size/Deck 2" unique_id=1061909615 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.5784364, -1.4555881, -1.7578449)
+
+[node name="Card_Template3" parent="Camera_/Cards_Lcoation_Size/Deck 2" unique_id=367104545 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.5772129, -1.4555881, -1.7578449)
+
+[node name="Deck 3" type="Node3D" parent="Camera_/Cards_Lcoation_Size" unique_id=1310350408]
+transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 2.5706751, -1.2401907, -2.264408e-08)
+
+[node name="Card_Template" parent="Camera_/Cards_Lcoation_Size/Deck 3" unique_id=113008558 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, -1.4555881, -1.7578449)
+
+[node name="Card_Template2" parent="Camera_/Cards_Lcoation_Size/Deck 3" unique_id=1821621255 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.5784364, -1.4555881, -1.7578449)
+
+[node name="Card_Template3" parent="Camera_/Cards_Lcoation_Size/Deck 3" unique_id=111243040 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.5772129, -1.4555881, -1.7578449)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera_" unique_id=429101328]
 target_position = Vector3(0, 0, -1)
@@ -54,6 +94,7 @@ text = "Money
 vertical_alignment = 1
 
 [node name="HandContainer" type="PanelContainer" parent="HUD" unique_id=811140340]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5

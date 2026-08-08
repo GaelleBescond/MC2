@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bo62vs6eonwkb"]
+
+[ext_resource type="Texture2D" uid="uid://kig7q210x0gq" path="res://assets/Card_placeholder.jpg" id="1_haesk"]
+[ext_resource type="Script" uid="uid://coxa5umbuyabv" path="res://card system/card_template.gd" id="1_oe13j"]
+[ext_resource type="Texture2D" uid="uid://cqs3sqev2yp3m" path="res://assets/Back_placeholder.jpg" id="3_setlb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ceia4"]
+size = Vector3(0.575, 0.01, 0.875)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_haesk"]
+shading_mode = 0
+albedo_texture = ExtResource("1_haesk")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ceia4"]
+material = SubResource("ORMMaterial3D_haesk")
+size = Vector2(0.575, 0.875)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_o4ov6"]
+shading_mode = 0
+albedo_texture = ExtResource("3_setlb")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_flsau"]
+material = SubResource("ORMMaterial3D_o4ov6")
+size = Vector2(0.575, 0.875)
+
+[node name="Card_Template" type="Node3D" unique_id=772346917]
+script = ExtResource("1_oe13j")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1431541364]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1763215055]
+shape = SubResource("BoxShape3D_ceia4")
+
+[node name="Front" type="MeshInstance3D" parent="Area3D" unique_id=592477170]
+mesh = SubResource("PlaneMesh_ceia4")
+
+[node name="Back" type="MeshInstance3D" parent="Area3D" unique_id=1992929207]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_flsau")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
