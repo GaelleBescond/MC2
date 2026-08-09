@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://bvrxyxhuo1pt2"]
+[gd_scene format=3 uid="uid://drkgia1m8ib6p"]
 
-[ext_resource type="PackedScene" uid="uid://cskr3hpq4eybo" path="res://area of control/base_area_of_control.tscn" id="1_jb5k7"]
-[ext_resource type="Material" uid="uid://c14e8fvxjpmhr" path="res://resources/base_ground.tres" id="2_kfsv8"]
-[ext_resource type="Material" uid="uid://dmk76i1nne5vo" path="res://resources/HaussmannMAterial.tres" id="3_wp8uc"]
+[ext_resource type="PackedScene" uid="uid://cskr3hpq4eybo" path="res://area of control/area_of_control.tscn" id="1_6ytvb"]
+[ext_resource type="Material" uid="uid://c14e8fvxjpmhr" path="res://resources/base_ground.tres" id="2_6vq7l"]
+[ext_resource type="Material" uid="uid://dmk76i1nne5vo" path="res://resources/HaussmannMAterial.tres" id="3_e16lm"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vb4k6"]
-material = ExtResource("2_kfsv8")
+material = ExtResource("2_6vq7l")
 top_radius = 32.0
 bottom_radius = 32.0
 height = 1.0
 radial_segments = 6
 
-[node name="Turn Wide" type="Node3D" unique_id=1792262330]
+[node name="Cul de Sac" type="Node3D" unique_id=1792262330]
 
-[node name="base_area_of_control" parent="." unique_id=467104796 instance=ExtResource("1_jb5k7")]
+[node name="base_area_of_control" parent="." unique_id=467104796 instance=ExtResource("1_6ytvb")]
 
 [node name="Tile" type="MeshInstance3D" parent="." unique_id=852419060]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -27,7 +27,7 @@ transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 2, 0)
 radius = 32.0
 height = 5.0
 sides = 6
-material = ExtResource("3_wp8uc")
+material = ExtResource("3_e16lm")
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Tile/CSGCombiner3D" unique_id=1676313228]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, 2, 0)
@@ -35,16 +35,10 @@ operation = 2
 radius = 24.0
 height = 5.0
 sides = 6
-material = ExtResource("3_wp8uc")
+material = ExtResource("3_e16lm")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Tile/CSGCombiner3D" unique_id=678205923]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 2, 0)
 operation = 2
 size = Vector3(10, 5, 15)
-material = ExtResource("3_wp8uc")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Tile/CSGCombiner3D" unique_id=940938744]
-transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -12.749999, 2, 21.217623)
-operation = 2
-size = Vector3(10, 5, 15)
-material = ExtResource("3_wp8uc")
+material = ExtResource("3_e16lm")

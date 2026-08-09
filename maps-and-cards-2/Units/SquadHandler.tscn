@@ -15,6 +15,13 @@ material = SubResource("StandardMaterial3D_20efn")
 safe_margin = 0.01
 script = ExtResource("1_iwpo4")
 
+[node name="Label3D" type="Label3D" parent="." unique_id=1552267639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+billboard = 1
+text = "PLAYER"
+font_size = 256
+outline_size = 48
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1392391115]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("ConvexPolygonShape3D_bu0v1")
@@ -29,12 +36,5 @@ simplify_path = true
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(0, 0.42642993, 0.031382598, 1)
-
-[node name="Label3D" type="Label3D" parent="." unique_id=1552267639]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
-billboard = 1
-text = "PLAYER"
-font_size = 256
-outline_size = 48
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]

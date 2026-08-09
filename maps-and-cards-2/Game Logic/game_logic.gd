@@ -25,6 +25,7 @@ func pass_move_order(destinationTarget) -> void:
 #1 second ticks
 func _on_timer_timeout() -> void:
 	update_money(level_passive_income)
+	print("every player gets " + str(level_passive_income))
 	
 	
 func update_money(money) -> void:

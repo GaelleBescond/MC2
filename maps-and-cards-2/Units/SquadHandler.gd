@@ -16,7 +16,6 @@ var playerOwner : int :
 					label_3d.modulate = color
 var originPosition : = Vector3()
 var targetPosition : = Vector3(0,0,0)
-var moveOrder := false
 var isInCombat := false
 
 @onready var label_3d: Label3D = $Label3D
@@ -28,7 +27,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if moveOrder:
+	if !isInCombat:
 		var destination = navigation_agent_3d.get_next_path_position()
 		var local_destinaton = destination - global_position
 		var direction = local_destinaton.normalized()	
@@ -36,12 +35,10 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 func received_move_order(targetPosition) -> void:
-	moveOrder= true
 	navigation_agent_3d.set_target_position(targetPosition)
 
 
 func _on_navigation_agent_3d_target_reached() -> void:
-	moveOrder = false
 	originPosition = targetPosition
 
 func retreat() -> void:

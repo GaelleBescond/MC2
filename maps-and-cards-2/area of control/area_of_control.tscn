@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cskr3hpq4eybo"]
 
-[ext_resource type="Script" uid="uid://cf0ic1s6oh08p" path="res://area of control/base_area_of_control.gd" id="1_4f7ue"]
+[ext_resource type="Script" uid="uid://cf0ic1s6oh08p" path="res://area of control/area_of_control.gd" id="1_l4lul"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2snab"]
 margin = 0.0
@@ -10,8 +10,8 @@ data = PackedVector3Array(0, 5.5, 32, 27.7128, 5.5, 16, 0, -5.5, 32, 27.7128, 5.
 transparency = 1
 albedo_color = Color(9.62615e-07, 0.28219315, 0.7511624, 0.49019608)
 
-[node name="base_area_of_control" type="Area3D" unique_id=467104796]
-script = ExtResource("1_4f7ue")
+[node name="area_of_control" type="Area3D" unique_id=467104796]
+script = ExtResource("1_l4lul")
 
 [node name="area_unit_collider" type="CollisionShape3D" parent="." unique_id=935359224]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.88146, 0)
@@ -30,11 +30,11 @@ font_size = 16
 wait_time = 0.3
 autostart = true
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2088116615]
+[node name="Hover toggle" type="CSGCombiner3D" parent="." unique_id=2088116615]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.138447, 0)
 visible = false
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=273080147]
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Hover toggle" unique_id=273080147]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, -8.138447, 0)
 radius = 32.0
 height = 0.5

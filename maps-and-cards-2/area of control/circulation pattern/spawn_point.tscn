@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c1r2y0e5bgm1e"]
+
+[ext_resource type="PackedScene" uid="uid://cskr3hpq4eybo" path="res://area of control/area_of_control.tscn" id="1_vxjq7"]
+
+[node name="SpawnPoint" unique_id=467104796 instance=ExtResource("1_vxjq7")]
