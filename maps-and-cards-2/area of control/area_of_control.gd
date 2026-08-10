@@ -1,5 +1,7 @@
 extends Area3D
 
+class_name AreaOfControl
+
 var squadsInside : Array[Node] = []
 var playerOwner : int :
 	set (ownerchange):
@@ -20,7 +22,7 @@ var playerOwner : int :
 
 @export_category("Area type")
 @export var canSpawnSquads := false
-@export_enum("Empty", "Plaza", "Artillery") var areaType
+@export_enum("Empty", "Plaza", "Artilery") var areaType
 @export_enum("Crossroad", "Cul de sac", "Plaza", "Straight Road", "Turn Sharp", "Turn Wide") var areaTile
 @export_enum("1", "2", "3") var tileVariant
 
@@ -33,10 +35,6 @@ var playerOwner : int :
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	playerOwner = player
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 #Hover feedbacks
@@ -67,7 +65,7 @@ func give_move_order(destination, player) -> void:
 		else:
 			print("Squad pinned")
 
-func check_enemity() -> void:
+func check_enemity() -> void:	
 	if squadsInside.size() >= 1:
 		var squadIndex := squadsInside[0]
 		var playerCheck : int = squadIndex.player
@@ -83,3 +81,6 @@ func check_enemity() -> void:
 	else:
 		print("nobody")
 	return
+
+func card_used(card) -> void:
+	print("card used")

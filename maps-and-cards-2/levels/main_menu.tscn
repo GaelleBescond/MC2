@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://itg88bv00pjm"]
 
 [ext_resource type="Script" uid="uid://b6iihufj8wf87" path="res://levels/main_menu.gd" id="1_0ettg"]
+[ext_resource type="AudioStream" uid="uid://c1fnxnwm3jgs" path="res://assets/Hymne.mp3" id="2_duh7t"]
 
 [node name="Node2D" type="CanvasLayer" unique_id=899622243]
 script = ExtResource("1_0ettg")
@@ -29,6 +30,13 @@ text = "Settings"
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1998610251]
 layout_mode = 2
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2021929839]
+stream = ExtResource("2_duh7t")
+volume_db = -10.0
+pitch_scale = 0.75
+autoplay = true
+mix_target = 1
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
