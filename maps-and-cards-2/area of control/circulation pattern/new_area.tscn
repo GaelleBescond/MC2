@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bdlfemy3y37vg"]
+
+[ext_resource type="PackedScene" uid="uid://cskr3hpq4eybo" path="res://area of control/area_of_control.tscn" id="1_olkxu"]
+[ext_resource type="Material" uid="uid://c14e8fvxjpmhr" path="res://resources/base_ground.tres" id="2_a235x"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ceia4"]
+material = ExtResource("2_a235x")
+top_radius = 32.0
+bottom_radius = 32.0
+radial_segments = 6
+
+[node name="area_of_control" unique_id=467104796 instance=ExtResource("1_olkxu")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=952815339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1185398, 0)
+mesh = SubResource("CylinderMesh_ceia4")

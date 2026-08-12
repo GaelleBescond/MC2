@@ -14,17 +14,14 @@ albedo_color = Color(9.62615e-07, 0.28219315, 0.7511624, 0.49019608)
 script = ExtResource("1_l4lul")
 
 [node name="area_unit_collider" type="CollisionShape3D" parent="." unique_id=935359224]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.88146, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.11854, 0)
 shape = SubResource("ConcavePolygonShape3D_2snab")
 debug_fill = false
 
-[node name="OwnerUI" type="Label3D" parent="." unique_id=524837501]
+[node name="NameUI" type="Label3D" parent="." unique_id=524837501]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.138447, 0)
 pixel_size = 0.085
 billboard = 1
-modulate = Color(0.6503868, 3.946722e-06, 0.41453207, 1)
-text = "Owner"
-font_size = 16
 
 [node name="Timer" type="Timer" parent="." unique_id=674946972]
 wait_time = 0.3

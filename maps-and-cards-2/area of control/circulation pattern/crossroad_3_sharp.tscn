@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://bsuv0m3486v03"]
 
-[ext_resource type="PackedScene" uid="uid://cskr3hpq4eybo" path="res://area of control/area_of_control.tscn" id="1_y8xof"]
+[ext_resource type="Script" uid="uid://cf0ic1s6oh08p" path="res://area of control/area_of_control.gd" id="1_hj6gx"]
 [ext_resource type="Material" uid="uid://c14e8fvxjpmhr" path="res://resources/base_ground.tres" id="2_vlrlu"]
 [ext_resource type="Material" uid="uid://dmk76i1nne5vo" path="res://resources/HaussmannMAterial.tres" id="3_tfvr0"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hj6gx"]
+margin = 0.0
+data = PackedVector3Array(0, 5.5, 32, 27.7128, 5.5, 16, 0, -5.5, 32, 27.7128, 5.5, 16, 27.7128, -5.5, 16, 0, -5.5, 32, 27.7128, 5.5, 16, 27.7128, 5.5, -16, 27.7128, -5.5, 16, 27.7128, 5.5, -16, 27.7128, -5.5, -16, 27.7128, -5.5, 16, 27.7128, 5.5, -16, 0, 5.5, -32, 27.7128, -5.5, -16, 0, 5.5, -32, 0, -5.5, -32, 27.7128, -5.5, -16, 0, 5.5, -32, -27.7128, 5.5, -16, 0, -5.5, -32, -27.7128, 5.5, -16, -27.7128, -5.5, -16, 0, -5.5, -32, -27.7128, 5.5, -16, -27.7128, 5.5, 16, -27.7128, -5.5, -16, -27.7128, 5.5, 16, -27.7128, -5.5, 16, -27.7128, -5.5, -16, -27.7128, 5.5, 16, 0, 5.5, 32, -27.7128, -5.5, 16, 0, 5.5, 32, 0, -5.5, 32, -27.7128, -5.5, 16, 0, 5.5, 0, 27.7128, 5.5, 16, 0, 5.5, 32, 0, 5.5, 0, 27.7128, 5.5, -16, 27.7128, 5.5, 16, 0, 5.5, 0, 0, 5.5, -32, 27.7128, 5.5, -16, 0, 5.5, 0, -27.7128, 5.5, -16, 0, 5.5, -32, 0, 5.5, 0, -27.7128, 5.5, 16, -27.7128, 5.5, -16, 0, 5.5, 0, 0, 5.5, 32, -27.7128, 5.5, 16, 0, -5.5, 0, 0, -5.5, 32, 27.7128, -5.5, 16, 0, -5.5, 0, 27.7128, -5.5, 16, 27.7128, -5.5, -16, 0, -5.5, 0, 27.7128, -5.5, -16, 0, -5.5, -32, 0, -5.5, 0, 0, -5.5, -32, -27.7128, -5.5, -16, 0, -5.5, 0, -27.7128, -5.5, -16, -27.7128, -5.5, 16, 0, -5.5, 0, -27.7128, -5.5, 16, 0, -5.5, 32)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wj5vr"]
+transparency = 1
+albedo_color = Color(9.62615e-07, 0.28219315, 0.7511624, 0.49019608)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmgay"]
 albedo_color = Color(0.061087877, 0.14849666, 0, 1)
@@ -14,9 +22,37 @@ bottom_radius = 32.0
 height = 1.0
 radial_segments = 6
 
-[node name="Plaza" type="Node3D" unique_id=1792262330]
+[node name="Crossroad3" type="Area3D" unique_id=1995711870]
+script = ExtResource("1_hj6gx")
+player = 1
+metadata/_custom_type_script = "uid://cf0ic1s6oh08p"
 
-[node name="base_area_of_control" parent="." unique_id=467104796 instance=ExtResource("1_y8xof")]
+[node name="area_unit_collider" type="CollisionShape3D" parent="." unique_id=286194173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.88146, 0)
+shape = SubResource("ConcavePolygonShape3D_hj6gx")
+debug_fill = false
+
+[node name="NameUI" type="Label3D" parent="." unique_id=1677476968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.138447, 0)
+pixel_size = 0.085
+billboard = 1
+modulate = Color(0.6503868, 3.946722e-06, 0.41453207, 1)
+text = "Name"
+
+[node name="Timer" type="Timer" parent="." unique_id=820778834]
+wait_time = 0.3
+autostart = true
+
+[node name="Hover toggle" type="CSGCombiner3D" parent="." unique_id=1763238738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.138447, 0)
+visible = false
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Hover toggle" unique_id=841078626]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0, -8.138447, 0)
+radius = 32.0
+height = 0.5
+sides = 6
+material = SubResource("StandardMaterial3D_wj5vr")
 
 [node name="Tile" type="MeshInstance3D" parent="." unique_id=852419060]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)

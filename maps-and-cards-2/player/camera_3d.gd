@@ -21,28 +21,15 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("left_click"):
 		if ray_cast_3d.is_colliding():
 			var selectedObject = ray_cast_3d.get_collider()
+			print(selectedObject)
 			if selectedObject is AreaOfControl:
 				areaOfDestination = select_area()
 				check_area_selection()
 				if selectedCard:
 					use_card(areaOfDestination)
-				print(areaOfDestination)
 		selectedCard = null
 		areaOfDestination = null
 		areaOfOrigin = null
-	
-	"""if ray_cast_3d.is_colliding():
-		if Input.is_action_just_pressed("left_click"):
-			var selectedObject = ray_cast_3d.get_collider()
-			print(selectedObject.get_class())
-			if  typeof(selectedObject) == TYPE_OBJECT :
-				print(ray_cast_3d.get_collider())
-				areaOfOrigin = select_area()
-			
-		if Input.is_action_just_released("left_click"):
-				areaOfDestination = select_area()
-			"""
-
 
 func ray_cast_update() -> void:
 	var mouse_position: Vector2 = get_viewport().get_mouse_position()
@@ -59,8 +46,6 @@ func check_area_selection() -> void:
 	if areaOfOrigin && areaOfDestination :
 		areaOfOrigin != areaOfDestination
 		areaOfOrigin.give_move_order(areaOfDestination, 1)
-		areaOfDestination = null
-		areaOfOrigin = null
 
 func use_card(location: AreaOfControl)-> void:
 	location.card_used(selectedCard)

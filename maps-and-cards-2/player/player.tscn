@@ -19,36 +19,48 @@ transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0, -
 
 [node name="Card_Template" parent="Camera_/Cards_Lcoation_Size/Deck 1" unique_id=772346917 instance=ExtResource("3_g1dw6")]
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, -1.4555881, -1.7578449)
+cardName = "Chirurgien"
+cardCost = 9
 
 [node name="Card_Template2" parent="Camera_/Cards_Lcoation_Size/Deck 1" unique_id=1486218094 instance=ExtResource("3_g1dw6")]
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.5784364, -1.4555881, -1.7578449)
+cardName = "Barricade fortifiée"
+cardCost = 12
 
 [node name="Card_Template3" parent="Camera_/Cards_Lcoation_Size/Deck 1" unique_id=901510495 instance=ExtResource("3_g1dw6")]
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.5772129, -1.4555881, -1.7578449)
+cardName = "Volontaires irlandais"
+cardCost = 7
 
 [node name="Deck 2" type="Node3D" parent="Camera_/Cards_Lcoation_Size" unique_id=1846208477]
 transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, -2.4251864, -1.2401907, -2.264408e-08)
 
 [node name="Card_Template" parent="Camera_/Cards_Lcoation_Size/Deck 2" unique_id=1219343835 instance=ExtResource("3_g1dw6")]
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, -1.4555881, -1.7578449)
+cardName = "Partisan"
 
 [node name="Card_Template2" parent="Camera_/Cards_Lcoation_Size/Deck 2" unique_id=1061909615 instance=ExtResource("3_g1dw6")]
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.5784364, -1.4555881, -1.7578449)
+cardName = "Franc-Tireur"
+cardCost = 6
 
 [node name="Card_Template3" parent="Camera_/Cards_Lcoation_Size/Deck 2" unique_id=367104545 instance=ExtResource("3_g1dw6")]
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.5772129, -1.4555881, -1.7578449)
+cardName = "Barricade"
+cardCost = 5
 
 [node name="Deck 3" type="Node3D" parent="Camera_/Cards_Lcoation_Size" unique_id=1310350408]
 transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 2.5706751, -1.2401907, -2.264408e-08)
 
 [node name="Card_Template" parent="Camera_/Cards_Lcoation_Size/Deck 3" unique_id=113008558 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, -1.4555881, -1.7578449)
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.2242283, -1.4555881, -1.7578449)
+cardName = "Barrage d'artillerie"
+cardCost = 15
 
-[node name="Card_Template2" parent="Camera_/Cards_Lcoation_Size/Deck 3" unique_id=1821621255 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.5784364, -1.4555881, -1.7578449)
-
-[node name="Card_Template3" parent="Camera_/Cards_Lcoation_Size/Deck 3" unique_id=111243040 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.5772129, -1.4555881, -1.7578449)
+[node name="Card_Template2" parent="Camera_/Cards_Lcoation_Size/Deck 3" unique_id=1431541364 instance=ExtResource("3_g1dw6")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.35657802, -1.4555881, -1.7578449)
+cardName = "Cuirassier"
+cardCost = 8
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera_" unique_id=429101328]
 target_position = Vector3(0, 0, -1)

@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://b6iihufj8wf87" path="res://levels/main_menu.gd" id="1_0ettg"]
 [ext_resource type="AudioStream" uid="uid://c1fnxnwm3jgs" path="res://assets/Hymne.mp3" id="2_duh7t"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_duh7t"]
+load_path = "res://.godot/imported/Revue_de_chalons_4899.JPG-1618419cd97ef5be12d75a625024e79d.ctex"
+
 [node name="Node2D" type="CanvasLayer" unique_id=899622243]
 script = ExtResource("1_0ettg")
 level_file_path = "uid://dempgf4yo7y24"
@@ -13,6 +16,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=830303426]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_duh7t")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=13829682]
 layout_mode = 2

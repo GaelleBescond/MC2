@@ -1,19 +1,12 @@
 [gd_scene format=3 uid="uid://bo62vs6eonwkb"]
 
-[ext_resource type="Texture2D" uid="uid://kig7q210x0gq" path="res://assets/Card_placeholder.jpg" id="1_haesk"]
 [ext_resource type="Script" uid="uid://coxa5umbuyabv" path="res://card system/card_template.gd" id="1_oe13j"]
 [ext_resource type="Texture2D" uid="uid://cqs3sqev2yp3m" path="res://assets/Back_placeholder.jpg" id="3_setlb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ceia4"]
 size = Vector3(0.575, 0.01, 0.875)
 
-[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_haesk"]
-transparency = 1
-shading_mode = 0
-albedo_texture = ExtResource("1_haesk")
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_ceia4"]
-material = SubResource("ORMMaterial3D_haesk")
 size = Vector2(0.575, 0.875)
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_o4ov6"]
@@ -37,6 +30,24 @@ mesh = SubResource("PlaneMesh_ceia4")
 [node name="Back" type="MeshInstance3D" parent="Front" unique_id=1992929207]
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("PlaneMesh_flsau")
+
+[node name="CostLabel" type="Label3D" parent="Front" unique_id=342243016]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.24157107, 0.0025842786, -0.3702095)
+pixel_size = 0.0013
+double_sided = false
+render_priority = 1
+text = "6"
+font_size = 64
+outline_size = 24
+
+[node name="NameLabel" type="Label3D" parent="Front" unique_id=1493249064]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.1709344, 0.0025842786, -0.369348)
+pixel_size = 0.0013
+double_sided = false
+render_priority = 1
+text = "Cardname"
+outline_size = 24
+horizontal_alignment = 0
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -6,35 +6,36 @@ var squadsInside : Array[Node] = []
 var playerOwner : int :
 	set (ownerchange):
 		var color: Color
-		owner_ui.text = "Player" + str(player)
 		if ownerchange == 1:
-			color = Color.DARK_BLUE
-			owner_ui.modulate = color
+			color = Color.DODGER_BLUE
+			name_ui.modulate = color
 		else:
 			if ownerchange == 2:
-				color = Color.DARK_RED
-				owner_ui.modulate = color
+				color = Color.RED
+				name_ui.modulate = color
 
 
 @export_category("Area ownership")
 @export var player := 0
 @export var captureGauge := 100.0
+@export var areaName = "AreaName"
 
 @export_category("Area type")
 @export var canSpawnSquads := false
-@export_enum("Empty", "Plaza", "Artilery") var areaType
+@export_enum("Empty", "Plaza", "Artillery") var areaType
 @export_enum("Crossroad", "Cul de sac", "Plaza", "Straight Road", "Turn Sharp", "Turn Wide") var areaTile
 @export_enum("1", "2", "3") var tileVariant
 
 
 
 @onready var area_unit_collider: CollisionShape3D = $area_unit_collider
-@onready var owner_ui: Label3D = $OwnerUI
+@onready var name_ui: Label3D = $NameUI
 @onready var hover_toggle: CSGCombiner3D = $"Hover toggle"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	playerOwner = player
+	name_ui.text = str(areaName)
 
 
 #Hover feedbacks
@@ -58,7 +59,7 @@ func _on_body_exited(body: Node3D) -> void:
 	check_enemity()
 
 func give_move_order(destination, player) -> void:
-	print("move order received by " + str(destination)+" from player "+ str(player))
+	#print("move order received by " + str(destination)+" from player "+ str(player))
 	for squad in squadsInside:
 		if squad.player == player && !squad.isInCombat:
 			squad.received_move_order(destination.global_position)
@@ -83,4 +84,5 @@ func check_enemity() -> void:
 	return
 
 func card_used(card) -> void:
-	print("card used")
+	
+	print(card.name)
