@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name squadHandler
 
 @export var squadSpeed := 5.0
 @export var player := 0

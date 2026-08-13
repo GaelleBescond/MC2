@@ -2,23 +2,35 @@ extends Area3D
 
 class_name AreaOfControl
 
-var squadsInside : Array[Node] = []
+var squadsInside : Array[squadHandler] = []
 var playerOwner : int :
-	set (ownerchange):
+	set (ownerChange):
 		var color: Color
-		if ownerchange == 1:
+		if ownerChange == 1:
 			color = Color.DODGER_BLUE
 			name_ui.modulate = color
 		else:
-			if ownerchange == 2:
+			if ownerChange == 2:
 				color = Color.RED
 				name_ui.modulate = color
 
 
 @export_category("Area ownership")
 @export var player := 0
-@export var captureGauge := 100.0
+@export var captureGauge : float = 100.0:
+	set (captureChange):
+		captureGauge = max(captureChange,0)
+		captureGauge = min(captureChange,100)
+		print(captureGauge)
+		if captureGauge <= 0:
+			player = 1
+			print("area decaptured")
+			playerOwner = player
+			
+@export var captureRate := 5
 @export var areaName = "AreaName"
+var enemyUnits := 0
+var alliedUnits := 0
 
 @export_category("Area type")
 @export var canSpawnSquads := false
@@ -37,6 +49,28 @@ func _ready() -> void:
 	playerOwner = player
 	name_ui.text = str(areaName)
 
+func _process(delta: float) -> void:
+	checkSquadsCapture(delta)
+	enemyUnits = 0
+	alliedUnits = 0
+
+
+func checkSquadsCapture(delta) -> void:
+	print(player)
+	for squad in squadsInside:
+		if squad.player == player:
+			alliedUnits +=1
+		if squad.player != player:
+			enemyUnits +=1
+	if alliedUnits >= 1 && enemyUnits == 0 :
+		print("area owned")
+		captureGauge += delta * captureRate
+	if alliedUnits == 0 && enemyUnits >= 1 :
+		print("area contested")
+		captureGauge -= delta * captureRate
+	print("allied: " + str(alliedUnits))
+	print("enemy: " + str(enemyUnits))
+	
 
 #Hover feedbacks
 func _on_mouse_entered() -> void:
