@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://da0nvf1mnquho"]
+
+[ext_resource type="Script" uid="uid://dshg204v1t2cn" path="res://card system/card_handler.gd" id="1_bisjr"]
+[ext_resource type="PackedScene" uid="uid://bo62vs6eonwkb" path="res://card system/card_template.tscn" id="1_llgbx"]
+
+[node name="CardHandler" type="Node3D" unique_id=2044708045]
+transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0, 0, 0)
+script = ExtResource("1_bisjr")
+
+[node name="Card_Template" parent="." unique_id=1431541364 instance=ExtResource("1_llgbx")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, -1.4555881, -1.7578449)
+cardName = "Chirurgien"
+cardCost = 9
+
+[node name="Card_Template2" parent="." unique_id=1238873966 instance=ExtResource("1_llgbx")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.5784364, -1.4555881, -1.7578449)
+cardName = "Barricade fortifiée"
+cardCost = 12
+
+[node name="Card_Template3" parent="." unique_id=1284273249 instance=ExtResource("1_llgbx")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.5772129, -1.4555881, -1.7578449)
+cardName = "Volontaires irlandais"
+cardCost = 7

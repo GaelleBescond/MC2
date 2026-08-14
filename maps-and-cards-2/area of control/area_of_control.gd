@@ -21,10 +21,8 @@ var playerOwner : int :
 	set (captureChange):
 		captureGauge = max(captureChange,0)
 		captureGauge = min(captureChange,100)
-		print(captureGauge)
 		if captureGauge <= 0:
 			player = 1
-			print("area decaptured")
 			playerOwner = player
 			
 @export var captureRate := 5
@@ -49,27 +47,18 @@ func _ready() -> void:
 	playerOwner = player
 	name_ui.text = str(areaName)
 
-func _process(delta: float) -> void:
-	checkSquadsCapture(delta)
-	enemyUnits = 0
-	alliedUnits = 0
-
-
-func checkSquadsCapture(delta) -> void:
-	print(player)
+func checkSquadsCapture() -> void:
 	for squad in squadsInside:
 		if squad.player == player:
 			alliedUnits +=1
 		if squad.player != player:
 			enemyUnits +=1
 	if alliedUnits >= 1 && enemyUnits == 0 :
-		print("area owned")
-		captureGauge += delta * captureRate
+		captureGauge += captureRate
 	if alliedUnits == 0 && enemyUnits >= 1 :
-		print("area contested")
-		captureGauge -= delta * captureRate
-	print("allied: " + str(alliedUnits))
-	print("enemy: " + str(enemyUnits))
+		captureGauge -= captureRate
+	enemyUnits = 0
+	alliedUnits = 0
 	
 
 #Hover feedbacks

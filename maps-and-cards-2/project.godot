@@ -33,6 +33,7 @@ project/assembly_name="Maps and Cards 2"
 "Combat Unit"="is a unit that can fight"
 Squad_Handler="Unit Handler"
 Player=""
+AreaOfControl=""
 
 [input]
 

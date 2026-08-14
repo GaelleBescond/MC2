@@ -38,6 +38,12 @@ player = 2
 captureRate = 10
 areaName = "Plaza"
 
+[node name="area_of_control2" parent="NavigationRegion3D/Environment" unique_id=613413041 instance=ExtResource("4_w7r7j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.4256, 0, 0)
+player = 2
+captureRate = 10
+areaName = "Plaza"
+
 [node name="GameLogic" parent="." unique_id=423017341 instance=ExtResource("2_w7r7j")]
 
 [node name="Player" parent="." unique_id=815340344 groups=["Player 1"] instance=ExtResource("1_gmgay")]
@@ -53,6 +59,10 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="BaseBlocks" unique_id=693945552]
 environment = SubResource("Environment_sb12i")
+
+[node name="Timer" type="Timer" parent="BaseBlocks" unique_id=743162810]
+wait_time = 0.5
+autostart = true
 
 [node name="Squads" type="Node" parent="." unique_id=320970374]
 

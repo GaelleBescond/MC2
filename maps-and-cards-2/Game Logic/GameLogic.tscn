@@ -5,8 +5,13 @@
 [node name="GameLogic" type="Node" unique_id=423017341]
 script = ExtResource("1_0fjvq")
 
-[node name="Timer" type="Timer" parent="." unique_id=265985633]
+[node name="TimerMoney" type="Timer" parent="." unique_id=265985633]
 wait_time = 5.0
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="TimerAreaCapture" type="Timer" parent="." unique_id=150648368]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="TimerMoney" to="." method="_on_timer_money_timeout"]
+[connection signal="timeout" from="TimerAreaCapture" to="." method="_on_timer_area_capture_timeout"]

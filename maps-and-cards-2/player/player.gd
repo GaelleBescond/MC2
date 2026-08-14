@@ -6,7 +6,7 @@ extends Node3D
 	set(money_in):
 		money = max(money_in,0) #clamps  to the biggest value, so if negative it goes back to zero
 		print(money)
-
+@onready var label_fps: Label = $HUD/OptionsContainer/LabelFPS
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +16,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	move_camera(delta)
+	label_fps.set_text("FPS " + str(Engine.get_frames_per_second()))
 
 func move_camera(delta) -> void:
 	if Input.is_action_pressed("input_up"):
@@ -42,7 +43,9 @@ func player_use_card() -> void:
 	if Input.is_action_pressed("ui_accept"):
 		return #print("player used a card")
 
-
 #send to level manager if player gives unit move order
 func player_gives_move_order() -> void:
 	pass
+
+func update_money(moneyChange:int) -> void:
+	money += moneyChange
