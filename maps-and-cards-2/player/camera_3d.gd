@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 				areaOfOrigin = select_area()
 			if selectedObject is Card:
 				selectedCard = selectedObject
+				selectedCard._select(true)
 
 	if Input.is_action_just_released("left_click"):
 		if ray_cast_3d.is_colliding():
@@ -27,13 +28,16 @@ func _process(delta: float) -> void:
 				check_area_selection()
 				if selectedCard:
 					use_card(areaOfDestination)
+		if(selectedCard):
+			selectedCard._select(false)
 		selectedCard = null
 		areaOfDestination = null
 		areaOfOrigin = null
+	
 
 func ray_cast_update() -> void:
 	var mouse_position: Vector2 = get_viewport().get_mouse_position()
-	ray_cast_3d.target_position = project_local_ray_normal(mouse_position) * 10000
+	ray_cast_3d.target_position = project_local_ray_normal(mouse_position) * 10
 	ray_cast_3d.force_raycast_update()
 	
 
@@ -49,4 +53,5 @@ func check_area_selection() -> void:
 
 func use_card(location: AreaOfControl)-> void:
 	location.card_used(selectedCard)
+	selectedCard.resource.PlayCard(location)
 	

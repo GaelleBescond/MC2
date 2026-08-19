@@ -46,6 +46,7 @@ var alliedUnits := 0
 func _ready() -> void:
 	playerOwner = player
 	name_ui.text = str(areaName)
+	
 
 func checkSquadsCapture() -> void:
 	for squad in squadsInside:

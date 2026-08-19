@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bo62vs6eonwkb"]
 
 [ext_resource type="Script" uid="uid://coxa5umbuyabv" path="res://card system/card_template.gd" id="1_oe13j"]
+[ext_resource type="Resource" uid="uid://7ue0seur5c2q" path="res://GameResources/Cards/RC_Test.tres" id="2_setlb"]
 [ext_resource type="Texture2D" uid="uid://cqs3sqev2yp3m" path="res://assets/Back_placeholder.jpg" id="3_setlb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ceia4"]
@@ -20,6 +21,7 @@ size = Vector2(0.575, 0.875)
 [node name="CardArea" type="Area3D" unique_id=1431541364]
 script = ExtResource("1_oe13j")
 scaleRatio = 2.0
+resource = ExtResource("2_setlb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1763215055]
 shape = SubResource("BoxShape3D_ceia4")

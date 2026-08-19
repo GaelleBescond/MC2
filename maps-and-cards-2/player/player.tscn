@@ -143,3 +143,5 @@ vertical_alignment = 2
 [node name="ColorRect" type="ColorRect" parent="HUD/OptionsContainer" unique_id=1148001874]
 layout_mode = 2
 color = Color(0.2788474, 0.00057419983, 0.72231513, 0.4509804)
+
+[editable path="Camera_/Cards_Location_Size/PlayerDeck"]
