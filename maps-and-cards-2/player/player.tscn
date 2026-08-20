@@ -15,13 +15,7 @@ script = ExtResource("2_rkbax")
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 4.7683717e-08, -1.3429908)
 
 [node name="PlayerDeck" parent="Camera_/Cards_Location_Size" unique_id=2044708045 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0, -1.2401907, -2.264408e-08)
-
-[node name="FactionDeck" parent="Camera_/Cards_Location_Size" unique_id=2131934545 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, -1.9008071, -1.2401907, -2.264408e-08)
-
-[node name="SpecialDeck" parent="Camera_/Cards_Location_Size" unique_id=1767713731 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 1.9848073, -1.2401907, -2.264408e-08)
+transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, -1.559, -1.24, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera_" unique_id=429101328]
 target_position = Vector3(0, 0, -1)
@@ -143,5 +137,3 @@ vertical_alignment = 2
 [node name="ColorRect" type="ColorRect" parent="HUD/OptionsContainer" unique_id=1148001874]
 layout_mode = 2
 color = Color(0.2788474, 0.00057419983, 0.72231513, 0.4509804)
-
-[editable path="Camera_/Cards_Location_Size/PlayerDeck"]

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://tatn0k72eps0"]
+
+[ext_resource type="Texture2D" uid="uid://lva70cneiu7s" path="res://Trash/TRASH_Chir.png" id="1_a6jao"]
+[ext_resource type="PackedScene" uid="uid://brfnmt3bu5qjl" path="res://Units/SquadHandler.tscn" id="2_ao5w0"]
+[ext_resource type="Script" uid="uid://i0n7f84uovrp" path="res://Scripts/Resources/Cards/Effects/CE_SpawnUnit.cs" id="3_g1wtf"]
+[ext_resource type="Script" uid="uid://4yidej7q6bp0" path="res://Scripts/Resources/Cards/CardResource.cs" id="4_h7wwh"]
+
+[sub_resource type="Resource" id="Resource_o4ov6"]
+script = ExtResource("3_g1wtf")
+_unitToSpawn = ExtResource("2_ao5w0")
+metadata/_custom_type_script = "uid://i0n7f84uovrp"
+
+[resource]
+script = ExtResource("4_h7wwh")
+_cardName = "Chir"
+_cardDesc = "n"
+_cardCost = 2
+_cardImage = ExtResource("1_a6jao")
+_effect = SubResource("Resource_o4ov6")
+metadata/_custom_type_script = "uid://4yidej7q6bp0"

@@ -1,23 +1,46 @@
 [gd_scene format=3 uid="uid://da0nvf1mnquho"]
 
-[ext_resource type="Script" uid="uid://dshg204v1t2cn" path="res://card system/card_handler.gd" id="1_bisjr"]
 [ext_resource type="PackedScene" uid="uid://bo62vs6eonwkb" path="res://card system/card_template.tscn" id="1_llgbx"]
+[ext_resource type="Script" uid="uid://skniqlp6rwke" path="res://Scripts/GameLogic/InGameStuff/CardHandler.cs" id="1_t02u8"]
 
-[node name="CardHandler" type="Node3D" unique_id=2044708045]
+[node name="CardHandler" type="Node3D" unique_id=2044708045 node_paths=PackedStringArray("_cardsInHand", "_drawnCards", "_undrawnCards")]
 transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0, 0, 0)
-script = ExtResource("1_bisjr")
+script = ExtResource("1_t02u8")
+_cardsInHand = [NodePath("Card_Template1"), NodePath("Card_Template2"), NodePath("Card_Template3"), NodePath("Card_Template4"), NodePath("Card_Template5"), NodePath("Card_Template6"), NodePath("Card_Template7")]
+_drawnCards = []
+_undrawnCards = []
 
-[node name="Card_Template" parent="." unique_id=1431541364 instance=ExtResource("1_llgbx")]
-transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, -1.4555881, -1.7578449)
+[node name="Card_Template1" parent="." unique_id=1431541364 instance=ExtResource("1_llgbx")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, 0, 0)
 cardName = "Chirurgien"
 cardCost = 9
 
 [node name="Card_Template2" parent="." unique_id=1238873966 instance=ExtResource("1_llgbx")]
-transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.5784364, -1.4555881, -1.7578449)
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0.578, 0, 0)
 cardName = "Barricade fortifiée"
 cardCost = 12
 
 [node name="Card_Template3" parent="." unique_id=1284273249 instance=ExtResource("1_llgbx")]
-transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, -0.5772129, -1.4555881, -1.7578449)
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 1.156, 0, 0)
 cardName = "Volontaires irlandais"
 cardCost = 7
+
+[node name="Card_Template4" parent="." unique_id=1347245868 instance=ExtResource("1_llgbx")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 1.734, 0, 0)
+cardName = "Chirurgien"
+cardCost = 9
+
+[node name="Card_Template5" parent="." unique_id=1097660969 instance=ExtResource("1_llgbx")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 2.312, 0, 0)
+cardName = "Chirurgien"
+cardCost = 9
+
+[node name="Card_Template6" parent="." unique_id=1902979448 instance=ExtResource("1_llgbx")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 2.89, 0, 0)
+cardName = "Chirurgien"
+cardCost = 9
+
+[node name="Card_Template7" parent="." unique_id=1138055632 instance=ExtResource("1_llgbx")]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 3.468, 0, 0)
+cardName = "Chirurgien"
+cardCost = 9

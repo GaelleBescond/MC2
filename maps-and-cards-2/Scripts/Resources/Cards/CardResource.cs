@@ -6,6 +6,7 @@ public partial class CardResource : Resource
 {
     [Export] private string _cardName, _cardDesc;
     [Export] private int _cardCost;
+    [Export] private Texture2D _cardImage;
     [Export] private CardEffect _effect;
 
     public string CardName => _cardName;
