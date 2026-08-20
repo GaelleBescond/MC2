@@ -42,7 +42,6 @@ text = "Quit"
 stream = ExtResource("2_duh7t")
 volume_db = -10.0
 pitch_scale = 0.75
-autoplay = true
 mix_target = 1
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
