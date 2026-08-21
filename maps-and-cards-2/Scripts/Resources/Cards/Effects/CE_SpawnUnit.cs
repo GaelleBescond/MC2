@@ -9,6 +9,14 @@ public partial class CE_SpawnUnit : CardEffect
     
     public override void Action(GodotObject areaOfControl)
     {
-        GD.Print($"Bravo tu as spawn {_numberOfUnit}{_unitToSpawn.GetName()} sur {areaOfControl.Get("name")}");
+        //Trés temp
+        if (areaOfControl is Node3D area3D)
+        {
+            if (_unitToSpawn.Instantiate() is Node3D unit)
+            {
+                area3D.GetTree().Root.AddChild(unit);
+                unit.GlobalPosition = area3D.GlobalPosition;
+            }
+        }
     }
 }

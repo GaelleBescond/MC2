@@ -38,6 +38,10 @@ func _initialize(new_ressource : CardResource, new_handler : CardHandler) -> voi
 	img_sprite.texture = resource._cardImage
 	pass
 
+func _discard() -> void:
+	handler.Discard(self)
+	pass
+
 func _select(_isSelected :bool) ->void:
 	isSelected = _isSelected
 	if(!_isSelected):

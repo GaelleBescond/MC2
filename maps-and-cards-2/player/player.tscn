@@ -22,6 +22,7 @@ target_position = Vector3(0, 0, -1)
 hit_from_inside = true
 collide_with_areas = true
 debug_shape_custom_color = Color(1, 0.30771422, 0.6341079, 1)
+debug_shape_thickness = 5
 
 [node name="HUD" type="Control" parent="." unique_id=56739699]
 layout_mode = 3

@@ -10,35 +10,41 @@ public partial class DeckManager : Manager
 	public override void _Ready()
 	{
 		_currentDeck = _fullDeck.Duplicate();
+		_discard = new Array<CardResource>();
 	}
 
 	public override void _Process(double delta)
 	{
 	}
 
+	public void Discard(CardResource card)
+	{
+		_discard.Add(card);
+	}
+	
 	public CardResource GetTopCard(bool remove = true)
 	{
-		if (_currentDeck.Count > 0)
+		while (_currentDeck.Count <= 0)
 		{
-			var ret = _currentDeck[0].Duplicate() as CardResource; // Je suis que moyen sur de ça
-			if (remove)
-			{
-				_currentDeck.RemoveAt(0);
-			}
-
-			GD.Print(_currentDeck.Count);
-			GD.Print(ret);
-			return ret;
+			ShuffleDiscard();
 		}
-		else
+		var ret = _currentDeck[0]; // Je suis que moyen sur de ça maybe duplcate as CardRessources
+		if (remove)
 		{
-			EmptyDeck();
+			_currentDeck.RemoveAt(0);
 		}
-		return default;
+		return ret;
 	}
 
-	private void EmptyDeck()
+	private void ShuffleDiscard()
 	{
-		GD.Print("Ono le deck est vide");
+		_currentDeck = _discard.Duplicate();
+		ShuffleDeck();
+		_discard.Clear();
+	}
+
+	private void ShuffleDeck()
+	{
+		_currentDeck.Shuffle();
 	}
 }

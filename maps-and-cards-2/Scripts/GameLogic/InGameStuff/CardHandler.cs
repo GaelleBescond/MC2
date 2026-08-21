@@ -51,6 +51,18 @@ public partial class CardHandler : Node3D
 		
 		ReorderCards();
 	}
+
+	private void Discard(Node3D card)
+	{
+		var resource = card.Get("resource").As<CardResource>();
+		if (resource == null)
+		{
+			return;
+		}
+		DisableCard(card);
+		_deckManager.Discard(resource);
+	}
+	
 	private void DrawCard()
 	{
 		AddCardToHand(_deckManager.GetTopCard(true));
