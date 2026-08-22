@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bbikx883llhfe"]
+
+[ext_resource type="Script" uid="uid://7ji2dwju755x" path="res://Scripts/GameLogic/Managers/GameManager.cs" id="1_kdq00"]
+[ext_resource type="Script" uid="uid://0n3fwqr0cqd2" path="res://Scripts/GameLogic/Managers/DeckManager.cs" id="2_3cl14"]
+[ext_resource type="Resource" uid="uid://7ue0seur5c2q" path="res://GameResources/Cards/RC_Test.tres" id="3_3cl14"]
+[ext_resource type="Resource" uid="uid://tatn0k72eps0" path="res://GameResources/Cards/RC_Test_Chir.tres" id="4_nvjto"]
+
+[node name="GameManager" type="Node" unique_id=1901647477]
+script = ExtResource("1_kdq00")
+metadata/_custom_type_script = "uid://7ji2dwju755x"
+
+[node name="DeckManager" type="Node" parent="." unique_id=576315995]
+script = ExtResource("2_3cl14")
+_currentDeck = Array[Object]([])
+_fullDeck = Array[Object]([ExtResource("3_3cl14"), ExtResource("4_nvjto"), ExtResource("3_3cl14")])

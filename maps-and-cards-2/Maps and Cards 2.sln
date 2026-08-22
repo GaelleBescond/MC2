@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maps and Cards 2", "Maps and Cards 2.csproj", "{F6C4C461-44EC-4B6C-8752-291AE877D60F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6C4C461-44EC-4B6C-8752-291AE877D60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C4C461-44EC-4B6C-8752-291AE877D60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C4C461-44EC-4B6C-8752-291AE877D60F}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{F6C4C461-44EC-4B6C-8752-291AE877D60F}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{F6C4C461-44EC-4B6C-8752-291AE877D60F}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{F6C4C461-44EC-4B6C-8752-291AE877D60F}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

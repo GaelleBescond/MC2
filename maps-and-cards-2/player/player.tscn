@@ -15,19 +15,14 @@ script = ExtResource("2_rkbax")
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 4.7683717e-08, -1.3429908)
 
 [node name="PlayerDeck" parent="Camera_/Cards_Location_Size" unique_id=2044708045 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0, -1.2401907, -2.264408e-08)
-
-[node name="FactionDeck" parent="Camera_/Cards_Location_Size" unique_id=2131934545 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, -1.9008071, -1.2401907, -2.264408e-08)
-
-[node name="SpecialDeck" parent="Camera_/Cards_Location_Size" unique_id=1767713731 instance=ExtResource("3_g1dw6")]
-transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 1.9848073, -1.2401907, -2.264408e-08)
+transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, -1.559, -1.24, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera_" unique_id=429101328]
 target_position = Vector3(0, 0, -1)
 hit_from_inside = true
 collide_with_areas = true
 debug_shape_custom_color = Color(1, 0.30771422, 0.6341079, 1)
+debug_shape_thickness = 5
 
 [node name="HUD" type="Control" parent="." unique_id=56739699]
 layout_mode = 3
