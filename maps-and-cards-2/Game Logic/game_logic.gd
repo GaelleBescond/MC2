@@ -22,7 +22,6 @@ func update_money(money) -> void:
 	
 
 func _on_timer_area_capture_timeout() -> void:
-	print("cap")
 	for area : AreaOfControl in get_tree().get_nodes_in_group("AreaOfControl"):
 		area.checkSquadsCapture()
 

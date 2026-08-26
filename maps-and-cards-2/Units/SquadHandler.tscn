@@ -14,6 +14,7 @@ material = SubResource("StandardMaterial3D_20efn")
 [node name="Squad_Handler" type="CharacterBody3D" unique_id=1038555013 groups=["Squad_Handler"]]
 safe_margin = 0.01
 script = ExtResource("1_iwpo4")
+player = 1
 
 [node name="Label3D" type="Label3D" parent="." unique_id=1552267639]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)

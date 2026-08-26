@@ -17,6 +17,8 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 4.7683717e-08, -1.34
 [node name="PlayerDeck" parent="Camera_/Cards_Location_Size" unique_id=2044708045 instance=ExtResource("3_g1dw6")]
 transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, -1.559, -1.24, 0)
 
+[node name="DrawTimer2" type="Timer" parent="Camera_/Cards_Location_Size/PlayerDeck" unique_id=1948123749]
+
 [node name="RayCast3D" type="RayCast3D" parent="Camera_" unique_id=429101328]
 target_position = Vector3(0, 0, -1)
 hit_from_inside = true

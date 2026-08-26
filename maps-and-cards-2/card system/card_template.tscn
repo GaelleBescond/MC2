@@ -28,10 +28,6 @@ shape = SubResource("BoxShape3D_ceia4")
 [node name="Front" type="MeshInstance3D" parent="." unique_id=592477170]
 mesh = SubResource("PlaneMesh_ceia4")
 
-[node name="Back" type="MeshInstance3D" parent="Front" unique_id=1992929207]
-transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("PlaneMesh_flsau")
-
 [node name="CostLabel" type="Label3D" parent="Front" unique_id=342243016]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.24157107, 0.0025842786, -0.3702095)
 pixel_size = 0.0013
@@ -54,6 +50,10 @@ horizontal_alignment = 0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.001, 0)
 pixel_size = 0.005
 texture = ExtResource("3_o4ov6")
+
+[node name="Back" type="MeshInstance3D" parent="Front" unique_id=1992929207]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_flsau")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

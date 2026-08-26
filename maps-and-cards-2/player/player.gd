@@ -5,7 +5,7 @@ extends Node3D
 @export var money := 5:
 	set(money_in):
 		money = max(money_in,0) #clamps  to the biggest value, so if negative it goes back to zero
-		print(money)
+		
 @onready var label_fps: Label = $HUD/OptionsContainer/LabelFPS
 
 # Called when the node enters the scene tree for the first time.
