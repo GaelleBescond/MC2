@@ -24,9 +24,16 @@ public partial class DeckManager : Manager
 	
 	public CardResource GetTopCard(bool remove = true)
 	{
-		while (_currentDeck.Count <= 0)
+		if (_currentDeck.Count <= 0)
 		{
-			ShuffleDiscard();
+			if (_discard.Count >0)
+			{
+				ShuffleDiscard();
+			}
+			else
+			{
+				return null;
+			}
 		}
 		var ret = _currentDeck[0]; // Je suis que moyen sur de ça maybe duplcate as CardRessources
 		if (remove)
