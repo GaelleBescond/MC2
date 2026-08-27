@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 
 
 func _on_child_entered_tree(node: Node) -> void:
-	pass # Replace with function body.
+	pass # Replace with function body.	
 
 func pass_move_order(destinationTarget) -> void:
 	get_tree().call_group("Squad_Handler", "received_move_order")
