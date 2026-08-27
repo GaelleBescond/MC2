@@ -32,6 +32,16 @@ public partial class CardHandler : Node3D
 		}
 		
 	}
+
+	public override void _Process(double delta)
+	{
+		base._Process(delta);
+		if (Input.IsActionJustPressed("input_escape"))
+		{
+			DrawCard();
+		}
+	}
+
 	private void ReorderCards()
 	{
 		for (int i = 0; i < _drawnCards.Count; i++)
@@ -70,6 +80,12 @@ public partial class CardHandler : Node3D
 	
 	private void AddCardToHand(CardResource newCard)
 	{
+		if (newCard == null)
+		{
+			return;
+		}
+
+		GD.Print("DrawCard");
 		var addedCard = _undrawnCards[0];
 		addedCard.SetVisible(true);		
 		addedCard.ProcessMode = ProcessModeEnum.Inherit;
