@@ -80,4 +80,13 @@ public partial class CardHandler : Node3D
 		
 		ReorderCards();
 	}
+	
+	public override void _Process(double delta)
+	{
+		base._Process(delta);
+		if (Input.IsKeyPressed(Key.A))
+		{
+			DrawCard();
+		}
+	}
 }
