@@ -68,14 +68,12 @@ autostart = true
 
 [node name="Squad3" parent="Squads" unique_id=1038555013 instance=ExtResource("3_gmgay")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.995927, -0.034303665, 0.8069382)
-player = 1
 
 [node name="Squad5" parent="Squads" unique_id=1572984560 instance=ExtResource("3_gmgay")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4580812, -0.034303665, 10.560001)
-player = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.582657, -0.034303665, 10.560001)
+player = 2
 
 [node name="Squad4" parent="Squads" unique_id=883351507 instance=ExtResource("3_gmgay")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.526416, -0.034303665, 0.8069382)
-player = 1
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]

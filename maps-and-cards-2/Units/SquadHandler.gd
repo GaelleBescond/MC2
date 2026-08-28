@@ -3,28 +3,35 @@ class_name squadHandler
 
 @export var squadSpeed := 5.0
 @export var player := 0
+@export var squadHP := 100
+@export var squadDamage := 5
+@export var squadAttackSpeed := 5 #counted as DPM? DPS?
+
+	
+
 var playerOwner : int :
 	set (ownerchange):
-		if label_3d != null:
-			var color: Color
-			label_3d.text = "Player" + str(player)
-			if ownerchange == 1:
-				color = Color.DARK_BLUE
-				label_3d.modulate = color
+		var material = unit_team.get_active_material(0) as StandardMaterial3D
+		print(material)
+		if ownerchange == 1:
+			material.albedo_color = Color.DODGER_BLUE
+			print("blue")
+		else:
+			if ownerchange == 2:
+				material.albedo_color = Color.RED
+				print("red")
 			else:
-				if ownerchange == 2:
-					color = Color.DARK_RED
-					label_3d.modulate = color
+				print(ownerchange)
+
 var originPosition : = Vector3()
 var targetPosition : = Vector3(0,0,0)
 var isInCombat := false
-
-@onready var label_3d: Label3D = $Label3D
+@onready var unit_team: MeshInstance3D = $UnitTeam
+@onready var unit_bill: MeshInstance3D = $UnitTeam/UnitBill
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 
 func _ready() -> void:
 	playerOwner = player
-	#received_move_order(targetPosition)
 
 
 func _physics_process(delta: float) -> void:

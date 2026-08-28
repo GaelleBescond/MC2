@@ -5,8 +5,9 @@ extends Node3D
 @export var money := 5:
 	set(money_in):
 		money = max(money_in,0) #clamps  to the biggest value, so if negative it goes back to zero
-		
+
 @onready var label_fps: Label = $HUD/OptionsContainer/LabelFPS
+@onready var player_deck: CardHandler = $Camera_/Cards_Location_Size/PlayerDeck
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +17,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	move_camera(delta)
+	if Input.is_action_just_pressed("ui_accept"):
+		player_deck.DrawCard()
 	label_fps.set_text("FPS " + str(Engine.get_frames_per_second()))
 
 func move_camera(delta) -> void:
@@ -49,3 +52,8 @@ func player_gives_move_order() -> void:
 
 func update_money(moneyChange:int) -> void:
 	money += moneyChange
+
+
+
+func _on_draw_timer_timeout() -> void:
+		player_deck.DrawCard()

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://3xvhxcnwkdhk"]
+
+[ext_resource type="Texture2D" uid="uid://d22knqry6cv2" path="res://Trash/TRASH_Spikeman.png" id="1_d62yt"]
+[ext_resource type="Script" uid="uid://4yidej7q6bp0" path="res://Scripts/Resources/Cards/CardResource.cs" id="1_uqsm0"]
+[ext_resource type="Script" uid="uid://i0n7f84uovrp" path="res://Scripts/Resources/Cards/Effects/CE_SpawnUnit.cs" id="2_3cci3"]
+
+[sub_resource type="Resource" id="Resource_g1dw6"]
+script = ExtResource("2_3cci3")
+metadata/_custom_type_script = "uid://i0n7f84uovrp"
+
+[resource]
+script = ExtResource("1_uqsm0")
+_cardName = "Partisan"
+_cardDesc = "An an"
+_cardCost = 2
+_cardImage = ExtResource("1_d62yt")
+_effect = SubResource("Resource_g1dw6")
+metadata/_custom_type_script = "uid://4yidej7q6bp0"

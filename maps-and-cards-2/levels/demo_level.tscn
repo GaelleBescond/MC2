@@ -34,7 +34,6 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 3), PackedInt32Arr
 stream = ExtResource("1_677m7")
 volume_db = -10.0
 pitch_scale = 0.75
-autoplay = true
 mix_target = 1
 
 [node name="BaseBlocks" type="Node" parent="." unique_id=195872604]
@@ -490,11 +489,9 @@ material = ExtResource("7_a3way")
 
 [node name="Unit_Base_Template" parent="Squads" unique_id=1695642108 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.100815, -0.034303665, -47.513153)
-player = 1
 
 [node name="Unit_Base_Template7" parent="Squads" unique_id=1038555013 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.100815, -0.034303665, 47.486847)
-player = 1
 
 [node name="Unit_Base_Template2" parent="Squads" unique_id=504194115 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1008148, -0.034303665, -0.5131531)
@@ -510,7 +507,6 @@ player = 2
 
 [node name="Unit_Base_Template11" parent="Squads" unique_id=1261615370 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, 73.92383, -0.034303665, -47.84568)
-player = 1
 
 [node name="Unit_Base_Template15" parent="Squads" unique_id=1339847940 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, 51.92383, -2.0343037, 3.1543274)
