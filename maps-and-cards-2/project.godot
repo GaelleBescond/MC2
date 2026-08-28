@@ -37,6 +37,7 @@ project/assembly_name="Maps and Cards 2"
 Squad_Handler="Unit Handler"
 Player=""
 AreaOfControl=""
+EnemyAreaLogic=""
 
 [input]
 

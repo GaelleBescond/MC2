@@ -30,6 +30,9 @@ var playerOwner : int :
 var enemyUnits := 0
 var alliedUnits := 0
 
+@export_category("LevelLogic")
+@export var destinationArea : AreaOfControl
+
 @export_category("Area type")
 @export var canSpawnSquads := false
 @export_enum("Empty", "Plaza", "Artillery") var areaType
