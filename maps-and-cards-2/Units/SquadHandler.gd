@@ -6,19 +6,20 @@ class_name squadHandler
 @export var squadHP := 100
 @export var squadDamage := 5
 @export var squadAttackSpeed := 5 #counted as DPM? DPS?
+const BLUE_TEAM = preload("uid://dc5v1hx8uvajv")
+const RED_TEAM = preload("uid://vyclqed7ewpv")
 
 	
 
 var playerOwner : int :
+	#stupid,
 	set (ownerchange):
-		var material = unit_team.get_active_material(0) as StandardMaterial3D
-		print(material)
 		if ownerchange == 1:
-			material.albedo_color = Color.DODGER_BLUE
+			unit_team.set_surface_override_material(0,BLUE_TEAM)
 			print("blue")
 		else:
 			if ownerchange == 2:
-				material.albedo_color = Color.RED
+				unit_team.set_surface_override_material(0,RED_TEAM)
 				print("red")
 			else:
 				print(ownerchange)

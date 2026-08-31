@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://brfnmt3bu5qjl"]
 
 [ext_resource type="Script" uid="uid://b1ss8at8qpbaf" path="res://Units/SquadHandler.gd" id="1_iwpo4"]
-[ext_resource type="Material" uid="uid://dc5v1hx8uvajv" path="res://resources/blue_team.material" id="2_5c6oo"]
 [ext_resource type="Texture2D" uid="uid://d22knqry6cv2" path="res://Trash/TRASH_Spikeman.png" id="2_qpcaw"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bu0v1"]
@@ -13,13 +12,19 @@ albedo_color = Color(0.8088508, 0.5889948, 0, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ceia4"]
 material = SubResource("StandardMaterial3D_20efn")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpcaw"]
+shading_mode = 0
+albedo_color = Color(0.22961095, 0.6815172, 1, 1)
+billboard_mode = 1
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_qpcaw"]
-material = ExtResource("2_5c6oo")
+material = SubResource("StandardMaterial3D_qpcaw")
 size = Vector2(5, 5)
 orientation = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5c6oo"]
 render_priority = 1
+shading_mode = 0
 albedo_texture = ExtResource("2_qpcaw")
 billboard_mode = 1
 
