@@ -63,6 +63,7 @@ metadata/_edit_lock_ = true
 
 [node name="LevelLogic" type="Node" parent="BaseBlocks/GameLogic" unique_id=2022275821]
 script = ExtResource("4_yy2pm")
+enemy_squad = ExtResource("4_pjwgr")
 
 [node name="EnemySpawn" type="Timer" parent="BaseBlocks/GameLogic/LevelLogic" unique_id=1514099581]
 wait_time = 5.0
@@ -484,19 +485,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.89919, -0.034303665, 143.
 player = 2
 
 [node name="Unit_Base_Template9" parent="Squads" unique_id=1570066731 instance=ExtResource("4_pjwgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.899185, -0.034303665, 143.48685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.899, 0, 143.487)
+player = 2
+
+[node name="Unit_Base_Template12" parent="Squads" unique_id=2061642540 instance=ExtResource("4_pjwgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.899, 0, 143.487)
 player = 2
 
 [node name="Unit_Base_Template10" parent="Squads" unique_id=2129345751 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.89919, -0.034303665, -49.513153)
-player = 2
-
-[node name="Unit_Base_Template2" parent="Squads" unique_id=504194115 instance=ExtResource("4_pjwgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1008148, -0.034303665, -0.5131531)
-player = 2
-
-[node name="Unit_Base_Template3" parent="Squads" unique_id=2075979536 instance=ExtResource("4_pjwgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.899185, -0.034303665, 2.486847)
 player = 2
 
 [node name="Unit_Base_Template5" parent="Squads" unique_id=1425566723 instance=ExtResource("4_pjwgr")]
