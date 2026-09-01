@@ -12,7 +12,7 @@ public partial class CardHandler : Node3D
 	//Should add an editor card pool and stuff
 	[Export] private Array<Node3D> _cardsInHand;
 	[Export] private Array<Node3D> _drawnCards,_undrawnCards;
-	[Export] private int _maxHandSize = 7, _startingHand = 3;
+	[Export] private int _maxHandSize = 7, _startingHand = 0;
 
 	private DeckManager _deckManager;
 	
