@@ -13,4 +13,4 @@ func _spawn_unit(area) -> void:
 	var new_squad= enemy_squad.instantiate()
 	new_squad.global_position = area.global_position
 	var player = get_tree().get_first_node_in_group("Player")
-	player.global_position = new_squad.global_position
+	#player.global_position = new_squad.global_position
