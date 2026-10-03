@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://dyrugcdkg40cu"]
+
+[ext_resource type="Texture2D" uid="uid://bbrkerbe0rbc7" path="res://Trash/LightInf.png" id="1_vk8ru"]
+[ext_resource type="Script" uid="uid://4yidej7q6bp0" path="res://Scripts/Resources/Cards/CardResource.cs" id="2_b3o48"]
+[ext_resource type="Script" uid="uid://i0n7f84uovrp" path="res://Scripts/Resources/Cards/Effects/CE_SpawnUnit.cs" id="2_eb8fk"]
+
+[sub_resource type="Resource" id="Resource_dq2fq"]
+script = ExtResource("2_eb8fk")
+metadata/_custom_type_script = "uid://i0n7f84uovrp"
+
+[resource]
+script = ExtResource("2_b3o48")
+_cardName = "Light Infantry"
+_cardDesc = "Mobile and accurate"
+_cardCost = 5
+_cardImage = ExtResource("1_vk8ru")
+_effect = SubResource("Resource_dq2fq")
+metadata/_custom_type_script = "uid://4yidej7q6bp0"

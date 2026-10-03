@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="squad_config" format=3 uid="uid://byuwu4hmejb6p"]
+
+[ext_resource type="Script" uid="uid://bjxsqoxna7jv1" path="res://Scripts/Resources/Squads/squad_config.gd" id="1_x6egm"]
+
+[resource]
+script = ExtResource("1_x6egm")
+squadSpeed = 3.0
+squadHP = 200
+squadDamage = 20
+squadAttackSpeed = 5
+metadata/_custom_type_script = "uid://bjxsqoxna7jv1"

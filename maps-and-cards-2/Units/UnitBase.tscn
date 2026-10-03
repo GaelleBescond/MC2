@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dq11f1hqibeet"]
+
+[ext_resource type="Script" uid="uid://dmes206qpdtr7" path="res://Units/unit_base.gd" id="1_kuamy"]
+[ext_resource type="Script" uid="uid://c37shq5uf4gk" path="res://addons/beehave/nodes/beehave_node.gd" id="2_fx0e3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d8nb5"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_j0lp8"]
+radius = 0.3
+height = 1.6
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=813367387]
+script = ExtResource("1_kuamy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1698446222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_d8nb5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=420878300]
+mesh = SubResource("CapsuleMesh_j0lp8")
+
+[node name="BeehaveNode" type="Node" parent="." unique_id=777031185]
+script = ExtResource("2_fx0e3")
+metadata/_custom_type_script = "uid://c37shq5uf4gk"

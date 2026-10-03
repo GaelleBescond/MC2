@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://rjytfpmggvrb"]
+
+[ext_resource type="Script" uid="uid://4yidej7q6bp0" path="res://Scripts/Resources/Cards/CardResource.cs" id="1_1dnss"]
+[ext_resource type="Texture2D" uid="uid://b2sfc7wa5riwm" path="res://Trash/HeavyInf.png" id="1_18xk4"]
+[ext_resource type="Script" uid="uid://i0n7f84uovrp" path="res://Scripts/Resources/Cards/Effects/CE_SpawnUnit.cs" id="2_6vahv"]
+
+[sub_resource type="Resource" id="Resource_2r23q"]
+script = ExtResource("2_6vahv")
+metadata/_custom_type_script = "uid://i0n7f84uovrp"
+
+[resource]
+script = ExtResource("1_1dnss")
+_cardName = "Heavy Infantry"
+_cardDesc = "Slow and steady"
+_cardCost = 10
+_cardImage = ExtResource("1_18xk4")
+_effect = SubResource("Resource_2r23q")
+metadata/_custom_type_script = "uid://4yidej7q6bp0"

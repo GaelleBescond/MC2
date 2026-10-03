@@ -1,15 +1,18 @@
 extends CharacterBody3D
 class_name squadHandler
 
+
+@export_category("Temporay Combat variables")
 @export var squadSpeed := 5.0
 @export var player := 0
 @export var squadHP := 100
 @export var squadDamage := 5
-@export var squadAttackSpeed := 5 #counted as DPM? DPS?
+@export var squadAttackSpeed := 1 #time between attacks
+@onready var temp_combat_timer: Timer = $TempCombatTimer
+#variables for temporary combat
+
 const BLUE_TEAM = preload("uid://dc5v1hx8uvajv")
 const RED_TEAM = preload("uid://vyclqed7ewpv")
-
-	
 
 var playerOwner : int :
 	#stupid,
@@ -32,7 +35,8 @@ var isInCombat := false
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
 
 func _ready() -> void:
-	playerOwner = player
+	playerOwner = player   
+	temp_combat_timer.wait_time = squadAttackSpeed
 
 
 func _physics_process(delta: float) -> void:
@@ -42,6 +46,9 @@ func _physics_process(delta: float) -> void:
 		var direction = local_destinaton.normalized()	
 		velocity = direction * squadSpeed
 		move_and_slide()
+	if isInCombat && temp_combat_timer.is_stopped():
+		temp_combat_timer.start()
+		print(self.name)
 
 func received_move_order(targetPosition) -> void:
 	navigation_agent_3d.set_target_position(targetPosition)
