@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://qm0i5n10ftnk"]
 
-[ext_resource type="PackedScene" uid="uid://ddivxkymsyn5l" path="res://player/player.tscn" id="1_gmgay"]
+[ext_resource type="PackedScene" uid="uid://ddivxkymsyn5l" path="res://Game Logic/player/player.tscn" id="1_gmgay"]
 [ext_resource type="PackedScene" uid="uid://bwj1mendnmse6" path="res://Game Logic/GameLogic.tscn" id="2_w7r7j"]
-[ext_resource type="PackedScene" uid="uid://brfnmt3bu5qjl" path="res://Units/SquadHandler.tscn" id="3_gmgay"]
-[ext_resource type="PackedScene" uid="uid://bdlfemy3y37vg" path="res://area of control/circulation pattern/new_area.tscn" id="4_w7r7j"]
+[ext_resource type="PackedScene" uid="uid://brfnmt3bu5qjl" path="res://Game Logic/Units/SquadHandler.tscn" id="3_gmgay"]
+[ext_resource type="PackedScene" uid="uid://bdlfemy3y37vg" path="res://Game Logic/area of control/circulation pattern/new_area.tscn" id="4_w7r7j"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_w7r7j"]
 vertices = PackedVector3Array(-64.94545, 0.63145256, 25.712494, -58.69545, 0.63145256, 29.712494, -54.94545, 0.63145256, 31.462494, -28.19545, 0.63145256, 15.712494, -27.44545, 0.63145256, 15.712494, -27.44545, 0.63145256, -15.787506, -28.19545, 0.63145256, -15.787506, -82.44545, 0.63145256, -16.037506, -82.44545, 0.63145256, 15.962494, -54.94545, 0.63145256, -31.537506, -56.94545, 0.63145256, -30.787506, -0.19544983, 0.63145256, 31.462494, 1.0545502, 0.63145256, 31.212494, 2.5545502, 0.63145256, 29.962494, 2.5545502, 0.63145256, -30.037506, 1.0545502, 0.63145256, -31.287506, -0.19544983, 0.63145256, -31.537506, 27.80455, 0.63145256, 15.712494, 27.80455, 0.63145256, -15.787506, 57.30455, 0.63145256, -30.787506, 55.30455, 0.63145256, -31.537506, 30.30455, 0.63145256, -16.787506, 55.30455, 0.63145256, 31.462494, 73.80455, 0.63145256, 21.212494, 82.80455, 0.63145256, 15.962494, 30.30455, 0.63145256, 16.712494, 82.80455, 0.63145256, -16.037506)

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ddivxkymsyn5l"]
 
-[ext_resource type="Script" uid="uid://bskeoc8ip8m6e" path="res://player/player.gd" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://4rc2inwsm2vs" path="res://player/camera_3d.gd" id="2_rkbax"]
-[ext_resource type="PackedScene" uid="uid://da0nvf1mnquho" path="res://card system/card_handler.tscn" id="3_g1dw6"]
+[ext_resource type="Script" uid="uid://bskeoc8ip8m6e" path="res://Game Logic/player/player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://4rc2inwsm2vs" path="res://Game Logic/player/camera_3d.gd" id="2_rkbax"]
+[ext_resource type="PackedScene" uid="uid://da0nvf1mnquho" path="res://Game Logic/card system/card_handler.tscn" id="3_g1dw6"]
 
 [node name="Player" type="Node3D" unique_id=815340344 groups=["Player"]]
 script = ExtResource("1_4flbx")
@@ -21,7 +21,7 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 4.7683717e-08, -1.34
 [node name="PlayerDeck" parent="Camera_/Cards_Location_Size" unique_id=2044708045 instance=ExtResource("3_g1dw6")]
 transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, -1.559, -1.24, 0)
 
-[node name="DrawTimer" type="Timer" parent="Camera_/Cards_Location_Size/PlayerDeck" unique_id=1948123749]
+[node name="DrawTimer" type="Timer" parent="Camera_/Cards_Location_Size/PlayerDeck" unique_id=1742102006]
 wait_time = 3.0
 autostart = true
 

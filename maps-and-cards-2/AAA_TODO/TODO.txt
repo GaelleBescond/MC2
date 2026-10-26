@@ -1,0 +1,25 @@
+COMBAT SYSTEM
+- RAS for now
+MOVEMENT SYSTEM
+- campaign speed
+- display correct portrait and name over unit
+FEEDBACK
+- add placeholder sounds
+- Add hp bars
+
+AREA
+- limit card usage depending on effects and rules
+- fog of war?
+
+CARDS (after combat system)
+- fix spawn card system
+- Add area explosion
+- add area healing
+
+AI PLAYER
+- create basic random spawns in territories owned by AI
+- create basic move orders
+
+AI UNITS
+- NOT YET
+- 

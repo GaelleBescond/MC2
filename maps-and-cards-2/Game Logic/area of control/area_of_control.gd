@@ -90,8 +90,8 @@ func give_move_order(destination, player) -> void:
 	for squad in squadsInside:
 		if squad.player == player && !squad.isInCombat:
 			squad.received_move_order(destination.global_position)
-		else:
-			print("Squad pinned")
+		#else:
+			#print("Squad pinned")
 
 func check_enemity() -> void:	
 	if squadsInside.size() >= 1:
@@ -100,14 +100,16 @@ func check_enemity() -> void:
 		var enemity := false
 		for squad in squadsInside:
 			if (squad.player != playerCheck) && (playerCheck != 0):
-				print(str(squad.player) + " enemity " + str(playerCheck))
+				#print(str(squad.player) + " enemity " + str(playerCheck))
 				enemity = true
 				break
 		for squad in squadsInside:
 			squad.toggle_combat_mode(enemity)
-			print(squad.isInCombat)
-	else:
-		print("nobody")
+			if enemity == true:
+				squad.find_target(squadsInside)
+			#print(squad.isInCombat)
+	#else:
+		#print("nobody")
 	return
 
 func card_used(card) -> void:

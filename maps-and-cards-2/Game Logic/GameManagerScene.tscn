@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bbikx883llhfe"]
 
-[ext_resource type="Script" uid="uid://7ji2dwju755x" path="res://Scripts/GameLogic/Managers/GameManager.cs" id="1_kdq00"]
-[ext_resource type="Script" uid="uid://0n3fwqr0cqd2" path="res://Scripts/GameLogic/Managers/DeckManager.cs" id="2_3cl14"]
+[ext_resource type="Script" uid="uid://7ji2dwju755x" path="res://Game Logic/Scripts/GameLogic/Managers/GameManager.cs" id="1_kdq00"]
+[ext_resource type="Script" uid="uid://0n3fwqr0cqd2" path="res://Game Logic/Scripts/GameLogic/Managers/DeckManager.cs" id="2_3cl14"]
 [ext_resource type="Resource" uid="uid://rjytfpmggvrb" path="res://GameResources/Cards/RC_Test_Heavy_Infantry.tres" id="3_nvjto"]
 [ext_resource type="Resource" uid="uid://dyrugcdkg40cu" path="res://GameResources/Cards/RC_Test_Light_Infantry.tres" id="4_wckbs"]
 

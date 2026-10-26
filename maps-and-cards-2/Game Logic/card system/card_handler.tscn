@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://da0nvf1mnquho"]
 
-[ext_resource type="PackedScene" uid="uid://bo62vs6eonwkb" path="res://card system/card_template.tscn" id="1_llgbx"]
-[ext_resource type="Script" uid="uid://skniqlp6rwke" path="res://Scripts/GameLogic/InGameStuff/CardHandler.cs" id="1_t02u8"]
+[ext_resource type="PackedScene" uid="uid://bo62vs6eonwkb" path="res://Game Logic/card system/card_template.tscn" id="1_llgbx"]
+[ext_resource type="Script" uid="uid://skniqlp6rwke" path="res://Game Logic/Scripts/GameLogic/InGameStuff/CardHandler.cs" id="1_t02u8"]
 
 [node name="CardHandler" type="Node3D" unique_id=2044708045 node_paths=PackedStringArray("_cardsInHand", "_drawnCards", "_undrawnCards")]
 transform = Transform3D(1, 0, 0, 0, 1, 2.9802322e-08, 0, -2.9802322e-08, 1, 0, 0, 0)

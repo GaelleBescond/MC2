@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bo62vs6eonwkb"]
 
-[ext_resource type="Script" uid="uid://coxa5umbuyabv" path="res://card system/card_template.gd" id="1_oe13j"]
+[ext_resource type="Script" uid="uid://coxa5umbuyabv" path="res://Game Logic/card system/card_template.gd" id="1_oe13j"]
 [ext_resource type="Texture2D" uid="uid://d22knqry6cv2" path="res://Trash/TRASH_Spikeman.png" id="3_o4ov6"]
 [ext_resource type="Texture2D" uid="uid://cqs3sqev2yp3m" path="res://assets/Back_placeholder.jpg" id="3_setlb"]
 

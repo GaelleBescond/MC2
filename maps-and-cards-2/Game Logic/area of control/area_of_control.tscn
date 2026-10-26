@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cskr3hpq4eybo"]
 
-[ext_resource type="Script" uid="uid://cf0ic1s6oh08p" path="res://area of control/area_of_control.gd" id="1_l4lul"]
+[ext_resource type="Script" uid="uid://cf0ic1s6oh08p" path="res://Game Logic/area of control/area_of_control.gd" id="1_l4lul"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2snab"]
 margin = 0.0

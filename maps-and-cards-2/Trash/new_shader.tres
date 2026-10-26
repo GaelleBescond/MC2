@@ -1,7 +1,7 @@
 [gd_resource type="VisualShader" format=3 uid="uid://clrom6ynjs7ub"]
 
-[ext_resource type="Texture2D" uid="uid://dylmieilkjqgi" path="res://resources/Flame1.png" id="1_ikxgy"]
-[ext_resource type="Texture2D" uid="uid://jyfjoay50b5s" path="res://resources/new_noise_texture_2d.tres" id="2_gwm2y"]
+[ext_resource type="Texture2D" uid="uid://dylmieilkjqgi" path="res://Trash/Flame1.png" id="1_ikxgy"]
+[ext_resource type="Texture2D" uid="uid://jyfjoay50b5s" path="res://Trash/new_noise_texture_2d.tres" id="2_gwm2y"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_46skr"]
 input_name = "time"

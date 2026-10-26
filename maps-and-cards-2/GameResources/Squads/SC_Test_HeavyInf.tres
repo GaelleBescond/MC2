@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="squad_config" format=3 uid="uid://byuwu4hmejb6p"]
 
-[ext_resource type="Script" uid="uid://bjxsqoxna7jv1" path="res://Scripts/Resources/Squads/squad_config.gd" id="1_x6egm"]
+[ext_resource type="Script" uid="uid://bjxsqoxna7jv1" path="res://Game Logic/Scripts/Resources/Squads/squad_config.gd" id="1_x6egm"]
 
 [resource]
 script = ExtResource("1_x6egm")

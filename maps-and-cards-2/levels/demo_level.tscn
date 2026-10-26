@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dempgf4yo7y24"]
 
 [ext_resource type="AudioStream" uid="uid://c1fnxnwm3jgs" path="res://assets/Hymne.mp3" id="1_677m7"]
-[ext_resource type="PackedScene" uid="uid://ddivxkymsyn5l" path="res://player/player.tscn" id="1_dmrny"]
+[ext_resource type="PackedScene" uid="uid://ddivxkymsyn5l" path="res://Game Logic/player/player.tscn" id="1_dmrny"]
 [ext_resource type="PackedScene" uid="uid://bwj1mendnmse6" path="res://Game Logic/GameLogic.tscn" id="2_ah2my"]
-[ext_resource type="PackedScene" uid="uid://bdlfemy3y37vg" path="res://area of control/circulation pattern/new_area.tscn" id="4_a3way"]
-[ext_resource type="PackedScene" uid="uid://brfnmt3bu5qjl" path="res://Units/SquadHandler.tscn" id="4_pjwgr"]
+[ext_resource type="PackedScene" uid="uid://bdlfemy3y37vg" path="res://Game Logic/area of control/circulation pattern/new_area.tscn" id="4_a3way"]
+[ext_resource type="PackedScene" uid="uid://brfnmt3bu5qjl" path="res://Game Logic/Units/SquadHandler.tscn" id="4_pjwgr"]
 [ext_resource type="Script" uid="uid://vva1pj8a3fhe" path="res://levels/level_logic_demo.gd" id="4_yy2pm"]
-[ext_resource type="Material" uid="uid://dmk76i1nne5vo" path="res://resources/HaussmannMAterial.tres" id="7_a3way"]
-[ext_resource type="PackedScene" uid="uid://bqvpjl1547vv" path="res://resources/base_cannon.tscn" id="9_lih0g"]
-[ext_resource type="PackedScene" uid="uid://d2wcn654xcuc4" path="res://resources/base_fountain.tscn" id="10_677m7"]
+[ext_resource type="Material" uid="uid://dmk76i1nne5vo" path="res://Trash/HaussmannMAterial.tres" id="7_a3way"]
+[ext_resource type="PackedScene" uid="uid://bqvpjl1547vv" path="res://Trash/base_cannon.tscn" id="9_lih0g"]
+[ext_resource type="PackedScene" uid="uid://d2wcn654xcuc4" path="res://Trash/base_fountain.tscn" id="10_677m7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f7g2b"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -82,6 +82,7 @@ navigation_mesh = SubResource("NavigationMesh_w7r7j")
 player = 2
 areaName = "Allée"
 areaType = 0
+metadata/_edit_lock_ = true
 
 [node name="area_of_control2" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1421769565 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7128, 0, 47.999996)
@@ -89,6 +90,7 @@ player = 2
 areaName = "Hotel de ville"
 areaType = 0
 areaTile = 1
+metadata/_edit_lock_ = true
 
 [node name="PlayerSpawn" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=897942636 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.1384, 0, -48)
@@ -96,6 +98,7 @@ player = 1
 areaName = "Café des amis de l'ABC"
 areaType = 0
 areaTile = 1
+metadata/_edit_lock_ = true
 
 [node name="area_of_control4" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=907978456 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7128, 0, -48)
@@ -103,6 +106,7 @@ player = 2
 areaName = "Contrescarpe"
 areaType = 0
 areaTile = 1
+metadata/_edit_lock_ = true
 
 [node name="area_of_control5" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1210311849 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -96)
@@ -110,6 +114,7 @@ player = 2
 areaName = "Contrescarpe"
 areaType = 0
 areaTile = 1
+metadata/_edit_lock_ = true
 
 [node name="area_of_control6" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1684492771 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.4256, 0, -96)
@@ -117,6 +122,7 @@ player = 2
 areaName = "Contrescarpe"
 areaType = 0
 areaTile = 1
+metadata/_edit_lock_ = true
 
 [node name="area_of_control10" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1008153806 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.1384, 0, -144)
@@ -124,6 +130,7 @@ player = 2
 areaName = "Quais"
 areaType = 0
 areaTile = 1
+metadata/_edit_lock_ = true
 
 [node name="area_of_control7" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=2051601695 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.1384, 0, -48)
@@ -131,6 +138,7 @@ player = 2
 areaName = "Ecurie Royale"
 areaType = 0
 areaTile = 1
+metadata/_edit_lock_ = true
 
 [node name="area_of_control8" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=948732597 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7128, 0, -48)
@@ -139,6 +147,7 @@ areaName = "Montmartre"
 areaType = 2
 areaTile = 1
 tileVariant = 1
+metadata/_edit_lock_ = true
 
 [node name="area_of_control9" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1395917775 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.4256, 0, 0)
@@ -146,6 +155,7 @@ player = 2
 areaName = "Monument"
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="area_of_control11" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=121594947 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 83.1384, 0, 48)
@@ -153,6 +163,7 @@ player = 2
 areaName = "Place"
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="area_of_control15" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=93835574 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.138397, 0, 95)
@@ -160,6 +171,7 @@ player = 2
 areaName = "Place"
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="EnemySpawn3" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=162118168 node_paths=PackedStringArray("destinationArea") groups=["EnemyAreaLogic"] instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.564, 0, -48)
@@ -168,6 +180,7 @@ areaName = "Place"
 destinationArea = NodePath("../PlayerSpawn")
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="EnemySpawn1" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=188662987 node_paths=PackedStringArray("destinationArea") groups=["EnemyAreaLogic"] instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.425598, 0, 143)
@@ -176,6 +189,7 @@ areaName = "Place"
 destinationArea = NodePath("../PlayerSpawn")
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="area_of_control19" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=996853292 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7128, 5.9604645e-08, 48)
@@ -183,6 +197,7 @@ player = 2
 areaName = "Place"
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="area_of_control20" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1697718252 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7127991, 0, 95)
@@ -190,6 +205,7 @@ player = 2
 areaName = "Place"
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="area_of_control16" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1047547225 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.563995, 0, 95)
@@ -197,6 +213,7 @@ player = 2
 areaName = "Place"
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="EnemySpawn2" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1964850608 node_paths=PackedStringArray("destinationArea") groups=["EnemyAreaLogic"] instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.2768, 0, 143)
@@ -205,6 +222,7 @@ areaName = "Place"
 destinationArea = NodePath("../PlayerSpawn")
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="area_of_control17" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=1099670141 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.564, 0, 48)
@@ -212,6 +230,7 @@ player = 2
 areaName = "Place"
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="area_of_control18" parent="Environment/NavigationRegion3D/BaseTiles" unique_id=399423755 instance=ExtResource("4_a3way")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.8512, 0, 0)
@@ -219,6 +238,7 @@ player = 2
 areaName = "Place"
 areaType = 1
 areaTile = 2
+metadata/_edit_lock_ = true
 
 [node name="LocalGeometry" type="Node" parent="Environment/NavigationRegion3D" unique_id=1652288826]
 
@@ -246,106 +266,127 @@ metadata/_edit_lock_ = true
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -110.3512, 1.8814602, -48)
 size = Vector3(32, 4, 1)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=517322297]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -103.3512, 1.8814602, -48)
 size = Vector3(32, 4, 15)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=473771904]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -90.3512, 1.8814602, -58.5)
 size = Vector3(11, 4, 15)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=2026811688]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -102.3512, 4.88146, -45.5)
 size = Vector3(11, 4, 15)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1152693543]
 transform = Transform3D(0.7071069, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.7071069, -42.810192, -0.6185398, -19.6722)
 size = Vector3(25.570313, 9, 24)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1917883139]
 transform = Transform3D(1.1920929e-07, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, 1.1920929e-07, -51.228584, -0.6185398, -28.264654)
 size = Vector3(18, 9, 15.746582)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=938889346]
 transform = Transform3D(1.4901161e-07, 0, -1, 0, 1, 0, 1, 0, 1.4901161e-07, -79.60425, 2.3814602, -43.667255)
 size = Vector3(2, 2, 2)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1850348842]
 transform = Transform3D(1.4901161e-07, 0, -1, 0, 1, 0, 1, 0, 1.4901161e-07, 54.39576, 2.3814602, 0.33272362)
 size = Vector3(2, 2, 2)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D24" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1058934510]
 transform = Transform3D(-0.86602545, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, -0.86602545, 97.94638, -0.6185398, -7.9489737)
 size = Vector3(18, 9, 62)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D25" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1567829573]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 85.94638, -0.6185398, -32.948975)
 size = Vector3(18, 9, 62)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1049246637]
 transform = Transform3D(-1, 0, -1.4901161e-07, 0, 1, 0, 1.4901161e-07, 0, -1, 27.855873, -0.6185398, 49.97755)
 size = Vector3(13, 9, 60)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1305397145]
 transform = Transform3D(-1, 0, -1.4901161e-07, 0, 1, 0, 1.4901161e-07, 0, -1, 37.855873, -0.6185398, 49.477547)
 size = Vector3(13, 9, 45)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D31" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=559226167]
 transform = Transform3D(-1, 0, -1.4901161e-07, 0, 1, 0, 1.4901161e-07, 0, -1, 48.855873, -0.6185398, 51.477547)
 size = Vector3(13, 9, 29)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D26" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=473553322]
 transform = Transform3D(0.5, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.5, 42.70747, -0.6185398, 31.701273)
 size = Vector3(13, 9, 42)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D30" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1998456310]
 transform = Transform3D(-0.50000006, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, -0.50000006, 43.119015, -0.6185398, 68.414085)
 size = Vector3(13, 9, 42)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=2040580542]
 transform = Transform3D(-0.22272801, 0, 0.9748805, 0, 1, 0, -0.9748805, 0, -0.22272801, 115.74262, -0.9226942, -160.93947)
 size = Vector3(8, 1, 45)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D22" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=2139070304]
 transform = Transform3D(-0.84683704, 0, 0.5318521, 0, 1, 0, -0.5318521, 0, -0.84683704, 101.08484, -0.9226942, -176.47934)
 size = Vector3(8, 1, 45)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D23" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1741308109]
 transform = Transform3D(-0.884016, 0, -0.46745637, 0, 1, 0, 0.46745637, 0, -0.884016, 67.89818, -0.9226942, -172.52393)
 size = Vector3(8, 1, 45)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1695433794]
 transform = Transform3D(-0.49999988, 0, -0.8660255, 0, 1, 0, 0.8660255, 0, -0.49999988, -39.56919, 4.38146, 68.53589)
 size = Vector3(8, 9, 32)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=907987883]
 transform = Transform3D(-0.49999988, 0, -0.8660255, 0, 1, 0, 0.8660255, 0, -0.49999988, -44.66246, 1.3814602, 56.357685)
 size = Vector3(8, 9, 11)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=459799291]
 transform = Transform3D(-0.49999988, 0, -0.8660255, 0, 1, 0, 0.8660255, 0, -0.49999988, -26.475925, 1.3814602, 66.85768)
 size = Vector3(8, 9, 11)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=2116995930]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 27.712807, 1.8814602, -48.000015)
@@ -353,23 +394,27 @@ radius = 36.0
 height = 4.0
 sides = 6
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D" unique_id=1211862287]
 transform = Transform3D(-0.8660253, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660253, 0.44212723, -2.5, 46.419323)
 size = Vector3(18, 9, 62)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D" unique_id=466554362]
 transform = Transform3D(-0.86602545, 0, 0.4999999, 0, 1, 0, -0.4999999, 0, -0.86602545, 21.032824, 2.5, 12.182624)
 operation = 2
 size = Vector3(15, 9, 12)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D" unique_id=1919443150]
 transform = Transform3D(-2.9802322e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -2.9802322e-08, -16.163303, -1.5, 3.9242973)
 operation = 2
 size = Vector3(39, 9, 49)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D" unique_id=534341644]
 operation = 2
@@ -377,11 +422,13 @@ radius = 26.34
 height = 4.0
 sides = 6
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D" unique_id=1752780720]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9349327, -1, -23.226242)
 size = Vector3(16, 6, 9)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=531690069]
 transform = Transform3D(0.5, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, 0.5, -83.15768, 1.8814602, -47.765385)
@@ -389,12 +436,14 @@ radius = 36.0
 height = 4.0
 sides = 12
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D2" unique_id=420752609]
 transform = Transform3D(-0.8660253, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, -0.8660253, 15.014875, 2.5, 24.007942)
 operation = 2
 size = Vector3(23, 9, 17)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D2" unique_id=988045296]
 operation = 2
@@ -402,6 +451,7 @@ radius = 26.34
 height = 4.0
 sides = 36
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1018123946]
 transform = Transform3D(-0.3877925, 0, 0.92174673, 0, 1, 0, -0.92174673, 0, -0.3877925, -28.520004, 1.8814602, 49.610252)
@@ -409,17 +459,20 @@ radius = 36.0
 height = 4.0
 sides = 18
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D3" unique_id=263112391]
 transform = Transform3D(0.38779235, 0, 0.9217467, 0, 1, 0, -0.9217467, 0, 0.38779235, 46.412857, -2.5, 13.742788)
 size = Vector3(18, 9, 41)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D3" unique_id=1317166949]
 transform = Transform3D(-0.8660253, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, -0.8660253, 15.112951, 0.5, 18.17781)
 operation = 2
 size = Vector3(29, 13, 27)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D3" unique_id=35546529]
 operation = 2
@@ -427,6 +480,7 @@ radius = 26.34
 height = 4.0
 sides = 9
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=763385706]
 transform = Transform3D(-0.3877925, 0, 0.92174673, 0, 1, 0, -0.92174673, 0, -0.3877925, 86.24802, 1.8814602, 49.061104)
@@ -434,36 +488,42 @@ radius = 36.0
 height = 4.0
 sides = 36
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D4" unique_id=1677075386]
 transform = Transform3D(-0.8660253, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, -0.8660253, 15.014875, 2.5, 24.007942)
 operation = 2
 size = Vector3(23, 9, 17)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D4" unique_id=246528654]
 transform = Transform3D(-0.91503614, 0, 0.40337187, 0, 1, 0, -0.40337187, 0, -0.91503614, -12.907129, 2.5, 27.797611)
 operation = 2
 size = Vector3(23, 9, 17)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D4" unique_id=721087591]
 transform = Transform3D(-0.8660253, 0, -0.5000001, 0, 1, 0, 0.5000001, 0, -0.8660253, -14.485132, 2.5, -27.087551)
 operation = 2
 size = Vector3(23, 9, 17)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D4" unique_id=319595861]
 transform = Transform3D(0.25881916, 0, -0.96592575, 0, 1, 0, 0.96592575, 0, 0.25881916, -28.733839, 2.5, 4.232956)
 operation = 2
 size = Vector3(23, 9, 17)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D4" unique_id=1952794007]
 transform = Transform3D(0.25881916, 0, -0.96592575, 0, 1, 0, 0.96592575, 0, 0.25881916, 29.221704, 2.5, -11.296194)
 operation = 2
 size = Vector3(23, 9, 17)
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2/CSGCylinder3D4" unique_id=1129627375]
 operation = 2
@@ -471,14 +531,17 @@ radius = 26.34
 height = 4.0
 sides = 36
 material = ExtResource("7_a3way")
+metadata/_edit_lock_ = true
 
 [node name="Squads" type="Node" parent="." unique_id=320970374]
 
 [node name="Unit_Base_Template" parent="Squads" unique_id=1695642108 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.100815, -0.034303665, -47.513153)
+player = 1
 
 [node name="Unit_Base_Template7" parent="Squads" unique_id=1038555013 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.100815, -0.034303665, 47.486847)
+player = 1
 
 [node name="Unit_Base_Template8" parent="Squads" unique_id=230390985 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.89919, -0.034303665, 143.48685)
@@ -497,15 +560,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.89919, -0.034303665, -49.
 player = 2
 
 [node name="Unit_Base_Template5" parent="Squads" unique_id=1425566723 instance=ExtResource("4_pjwgr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.899185, -2.0343037, -2.513153)
-player = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.164845, 0.24763393, 102.20599)
+player = 1
 
 [node name="Unit_Base_Template11" parent="Squads" unique_id=1261615370 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, 73.92383, -0.034303665, -47.84568)
+player = 1
+squadMaxHP = 300
+squadAttackSpeed = 2
 
 [node name="Unit_Base_Template15" parent="Squads" unique_id=1339847940 instance=ExtResource("4_pjwgr")]
-transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, 51.92383, -2.0343037, 3.1543274)
+transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, 46.41255, 0.31231356, 11.525927)
 player = 2
+squadMaxHP = 200
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="timeout" from="BaseBlocks/GameLogic/LevelLogic/EnemySpawn" to="BaseBlocks/GameLogic/LevelLogic" method="_on_enemy_spawn_timeout"]
