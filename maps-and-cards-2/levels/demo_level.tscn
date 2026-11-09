@@ -537,6 +537,7 @@ metadata/_edit_lock_ = true
 
 [node name="Unit_Base_Template" parent="Squads" unique_id=1695642108 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.100815, -0.034303665, -47.513153)
+squadSpeed = 50.0
 player = 1
 
 [node name="Unit_Base_Template7" parent="Squads" unique_id=1038555013 instance=ExtResource("4_pjwgr")]
