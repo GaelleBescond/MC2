@@ -2,11 +2,11 @@
 
 [ext_resource type="AudioStream" uid="uid://c1fnxnwm3jgs" path="res://assets/Hymne.mp3" id="1_677m7"]
 [ext_resource type="PackedScene" uid="uid://ddivxkymsyn5l" path="res://Game Logic/player/player.tscn" id="1_dmrny"]
-[ext_resource type="PackedScene" uid="uid://bwj1mendnmse6" path="res://Game Logic/GameLogic.tscn" id="2_ah2my"]
+[ext_resource type="PackedScene" uid="uid://bwj1mendnmse6" path="res://Game Logic/LevelLogic.tscn" id="2_ah2my"]
 [ext_resource type="PackedScene" uid="uid://bdlfemy3y37vg" path="res://Game Logic/area of control/circulation pattern/new_area.tscn" id="4_a3way"]
 [ext_resource type="PackedScene" uid="uid://brfnmt3bu5qjl" path="res://Game Logic/Units/SquadHandler.tscn" id="4_pjwgr"]
-[ext_resource type="Script" uid="uid://vva1pj8a3fhe" path="res://levels/level_logic_demo.gd" id="4_yy2pm"]
 [ext_resource type="Material" uid="uid://dmk76i1nne5vo" path="res://Trash/HaussmannMAterial.tres" id="7_a3way"]
+[ext_resource type="Material" uid="uid://dg8jsd8g4cqvn" path="res://Trash/grid_material.tres" id="7_yy2pm"]
 [ext_resource type="PackedScene" uid="uid://bqvpjl1547vv" path="res://Trash/base_cannon.tscn" id="9_lih0g"]
 [ext_resource type="PackedScene" uid="uid://d2wcn654xcuc4" path="res://Trash/base_fountain.tscn" id="10_677m7"]
 
@@ -31,10 +31,22 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 3), PackedInt32Arr
 
 [node name="Level_Root" type="Node3D" unique_id=690939052]
 
+[node name="LevelLogic" parent="." unique_id=423017341 instance=ExtResource("2_ah2my")]
+
+[node name="Player" parent="LevelLogic" unique_id=815340344 groups=["Player 1"] instance=ExtResource("1_dmrny")]
+transform = Transform3D(0.62098664, 0, -0.7838211, 0, 1, 0, 0.7838211, 0, 0.62098664, -112.06565, 45.909203, -23)
+camera_speed = 30.0
+metadata/_edit_lock_ = true
+
+[node name="EnemySpawn" type="Timer" parent="LevelLogic" unique_id=1514099581]
+wait_time = 5.0
+autostart = true
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1011452857]
 stream = ExtResource("1_677m7")
 volume_db = -10.0
 pitch_scale = 0.75
+autoplay = true
 mix_target = 1
 
 [node name="BaseBlocks" type="Node" parent="." unique_id=195872604]
@@ -53,21 +65,6 @@ metadata/_edit_lock_ = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="BaseBlocks" unique_id=693945552]
 environment = SubResource("Environment_sb12i")
-
-[node name="Player" parent="BaseBlocks" unique_id=815340344 groups=["Player 1"] instance=ExtResource("1_dmrny")]
-transform = Transform3D(0.62098664, 0, -0.7838211, 0, 1, 0, 0.7838211, 0, 0.62098664, -112.06565, 45.909203, -23)
-camera_speed = 30.0
-metadata/_edit_lock_ = true
-
-[node name="GameLogic" parent="BaseBlocks" unique_id=423017341 instance=ExtResource("2_ah2my")]
-
-[node name="LevelLogic" type="Node" parent="BaseBlocks/GameLogic" unique_id=2022275821]
-script = ExtResource("4_yy2pm")
-enemy_squad = ExtResource("4_pjwgr")
-
-[node name="EnemySpawn" type="Timer" parent="BaseBlocks/GameLogic/LevelLogic" unique_id=1514099581]
-wait_time = 5.0
-autostart = true
 
 [node name="Environment" type="Node" parent="." unique_id=1275534091]
 
@@ -260,6 +257,7 @@ transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49
 size = Vector3(1, 1, 6)
 
 [node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Environment/NavigationRegion3D/LocalGeometry" unique_id=883695351]
+material_override = ExtResource("7_yy2pm")
 metadata/_edit_lock_ = true
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Environment/NavigationRegion3D/LocalGeometry/CSGCombiner3D2" unique_id=1841077875]
@@ -547,6 +545,14 @@ player = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.89919, -0.034303665, 143.48685)
 player = 2
 
+[node name="Unit_Base_Template13" parent="Squads" unique_id=946532244 instance=ExtResource("4_pjwgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.89919, -0.034303665, 131.48685)
+player = 2
+
+[node name="Unit_Base_Template14" parent="Squads" unique_id=1204304458 instance=ExtResource("4_pjwgr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.89919, -0.034303665, -35.513153)
+player = 2
+
 [node name="Unit_Base_Template9" parent="Squads" unique_id=1570066731 instance=ExtResource("4_pjwgr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.899, 0, 143.487)
 player = 2
@@ -575,6 +581,6 @@ player = 2
 squadMaxHP = 200
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
-[connection signal="timeout" from="BaseBlocks/GameLogic/LevelLogic/EnemySpawn" to="BaseBlocks/GameLogic/LevelLogic" method="_on_enemy_spawn_timeout"]
+[connection signal="timeout" from="LevelLogic/EnemySpawn" to="LevelLogic" method="_on_enemy_spawn_timeout"]
 
 [editable path="Environment/NavigationRegion3D/BaseTiles/area_of_control"]

@@ -1,11 +1,14 @@
 COMBAT SYSTEM
 - RAS for now
 MOVEMENT SYSTEM
-- campaign speed
+- campaining speed
 - display correct portrait and name over unit
 FEEDBACK
 - add placeholder sounds
 - Add hp bars
+
+DECK
+- Create deckbuilding scene
 
 AREA
 - limit card usage depending on effects and rules

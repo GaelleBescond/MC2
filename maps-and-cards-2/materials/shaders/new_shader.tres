@@ -1,7 +1,7 @@
 [gd_resource type="VisualShader" format=3 uid="uid://clrom6ynjs7ub"]
 
-[ext_resource type="Texture2D" uid="uid://dylmieilkjqgi" path="res://Trash/Flame1.png" id="1_ikxgy"]
-[ext_resource type="Texture2D" uid="uid://jyfjoay50b5s" path="res://Trash/new_noise_texture_2d.tres" id="2_gwm2y"]
+[ext_resource type="Texture2D" uid="uid://jyfjoay50b5s" path="res://Trash/new_noise_texture_2d.tres" id="1_dcwke"]
+[ext_resource type="Texture2D" uid="uid://dylmieilkjqgi" path="res://Trash/Flame1.png" id="2_76o6n"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_46skr"]
 input_name = "time"
@@ -29,7 +29,7 @@ input_name = "uv"
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_j0q02"]
 expanded_output_ports = [0]
-texture = ExtResource("2_gwm2y")
+texture = ExtResource("1_dcwke")
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_3gb6g"]
 default_input_values = [0, 0.0, 1, 0.1]
@@ -59,11 +59,11 @@ operator = 2
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_2846y"]
 expanded_output_ports = [0]
-texture = ExtResource("1_ikxgy")
+texture = ExtResource("2_76o6n")
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_yjjxt"]
 expanded_output_ports = [0]
-texture = ExtResource("2_gwm2y")
+texture = ExtResource("1_dcwke")
 
 [resource]
 nodes/vertex/0/position = Vector2(1280, 200)
@@ -78,7 +78,7 @@ nodes/fragment/22/position = Vector2(-2040, 600)
 nodes/fragment/23/node = SubResource("VisualShaderNodeVectorOp_femkb")
 nodes/fragment/23/position = Vector2(-1580, 660)
 nodes/fragment/24/node = SubResource("VisualShaderNodeVectorOp_ikxgy")
-nodes/fragment/24/position = Vector2(20, 500)
+nodes/fragment/24/position = Vector2(20, 420)
 nodes/fragment/25/node = SubResource("VisualShaderNodeFloatOp_gwm2y")
 nodes/fragment/25/position = Vector2(-2260, 520)
 nodes/fragment/31/node = SubResource("VisualShaderNodeTexture_j0q02")

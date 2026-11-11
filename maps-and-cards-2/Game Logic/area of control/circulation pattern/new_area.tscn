@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://bdlfemy3y37vg"]
 
 [ext_resource type="PackedScene" uid="uid://cskr3hpq4eybo" path="res://Game Logic/area of control/area_of_control.tscn" id="1_olkxu"]
-[ext_resource type="Material" uid="uid://c14e8fvxjpmhr" path="res://Trash/base_ground.tres" id="2_a235x"]
+[ext_resource type="Material" uid="uid://dg8jsd8g4cqvn" path="res://Trash/grid_material.tres" id="2_hapoq"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ceia4"]
-material = ExtResource("2_a235x")
+material = ExtResource("2_hapoq")
 top_radius = 32.0
 bottom_radius = 32.0
 radial_segments = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hapoq"]
+transparency = 1
+albedo_color = Color(9.62615e-07, 0.28219315, 0.7511624, 0.49019608)
 
 [node name="area_of_control" unique_id=467104796 instance=ExtResource("1_olkxu")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=952815339]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1185398, 0)
 mesh = SubResource("CylinderMesh_ceia4")
+
+[node name="CSGCylinder3D" parent="Hover toggle" parent_id_path=PackedInt32Array(2088116615) index="0" unique_id=273080147]
+material = SubResource("StandardMaterial3D_hapoq")

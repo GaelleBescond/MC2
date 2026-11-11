@@ -9,8 +9,10 @@ class_name squadHandler
 @export var squadMaxHP := 100
 var squadHP : int :
 	set (hpchange):
-		squadHP = hpchange
+		squadHP = max(hpchange, 0)
 		hp_bar.text = str(squadHP)
+		if squadHP <= 0:
+			queue_free()
 		
 @export var squadDamage := 5
 @export var squadAttackSpeed := 1 #time between attacks
