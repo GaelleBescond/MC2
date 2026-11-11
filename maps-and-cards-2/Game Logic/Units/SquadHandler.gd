@@ -50,19 +50,15 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if !isInCombat:
-		var destination = navigation_agent_3d.get_next_path_position()
-		var local_destinaton = destination - global_position
-		var direction = local_destinaton.normalized()	
-		velocity = direction * squadSpeed
+		navigation_agent_3d.get_next_path_position()
+		velocity = global_position.direction_to(navigation_agent_3d.get_next_path_position()) * squadSpeed
 		move_and_slide()
 	if isInCombat && temp_combat_timer.is_stopped():
 		temp_combat_timer.start()
-		
-		#print(self.name)
+
 
 func received_move_order(targetPosition) -> void:
 	navigation_agent_3d.set_target_position(targetPosition)
-
 
 func _on_navigation_agent_3d_target_reached() -> void:
 	originPosition = targetPosition
