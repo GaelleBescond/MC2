@@ -46,7 +46,6 @@ autostart = true
 stream = ExtResource("1_677m7")
 volume_db = -10.0
 pitch_scale = 0.75
-autoplay = true
 mix_target = 1
 
 [node name="BaseBlocks" type="Node" parent="." unique_id=195872604]

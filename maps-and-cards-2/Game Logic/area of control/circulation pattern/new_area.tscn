@@ -15,7 +15,7 @@ albedo_color = Color(9.62615e-07, 0.28219315, 0.7511624, 0.49019608)
 
 [node name="area_of_control" unique_id=467104796 instance=ExtResource("1_olkxu")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1" unique_id=952815339]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="1" unique_id=952815339]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1185398, 0)
 mesh = SubResource("CylinderMesh_ceia4")
 
